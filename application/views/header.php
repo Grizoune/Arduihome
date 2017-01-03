@@ -54,7 +54,11 @@
 
 
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="<?php echo site_url('dashboard/index'); ?>">Dashboard <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo site_url('scenario/index'); ?>">Scénarios </a>
         </li>
 
           <li class="nav-item dropdown">
