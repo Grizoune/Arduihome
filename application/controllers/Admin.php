@@ -15,7 +15,7 @@ class Admin extends CI_Controller{
 
 			$output = $crud->render();
 
-			$this->load->view('header');
+			$this->load->view('header', $output);
 			$this->load->view('admin', $output);
 			$this->load->view('footer');
 	}

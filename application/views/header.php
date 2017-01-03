@@ -17,6 +17,25 @@
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url(); ?>assets/css/arduihome.css" rel="stylesheet">
 
+      <script src="<?php echo base_url(); ?>assets/js/jquery-3.1.1.min.js"></script>
+      <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+           <script src="<?php echo base_url(); ?>/assets/js/arduihome.js"></script>
+
+
+    <?php 
+        if(isset($css_files)){
+          foreach($css_files as $file){ 
+            ?><link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" /><?php 
+          }
+        }
+        if(isset($js_files)){ 
+            foreach($js_files as $file){ 
+              ?><script src="<?php echo $file; ?>"></script><?php
+             }
+        } 
+?>
+
+
     <script>
         var site_url = "<?php echo site_url(); ?>";
     </script>
