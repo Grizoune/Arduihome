@@ -320,11 +320,17 @@
     function myUpdateFunction(event) {
 
       var code = Blockly.PHP.workspaceToCode(workspace);
-        console.log(code);
       $('#code').html(code);
     }
     workspace.addChangeListener(myUpdateFunction);
 
+//store
+    var xml = Blockly.Xml.workspaceToDom(workspace);
+var xml_text = Blockly.Xml.domToText(xml);
+
+//restore
+var xml = Blockly.Xml.textToDom(xml_text);
+Blockly.Xml.domToWorkspace(xml, workspace);
 
 
 var actionJson = {
