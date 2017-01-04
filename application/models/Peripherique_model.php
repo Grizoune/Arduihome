@@ -14,7 +14,13 @@ class Peripherique_model extends CI_Model{
 	}
 
 	public function find($_id){
-		$obj = $this->db->where('id', $_id)->get('peripherique')->row();
+		$obj = $this->db
+					->select('z.*, p.*')
+					->where('p.id', $_id)
+					->join('zone z', 'z.id = p.id_zone')
+					->get('peripherique p')
+					->row();
+
 		$obj->commandes = $this->db->where('id_peripherique', $obj->id)->get('commande')->result();
 		return $obj;
 	}

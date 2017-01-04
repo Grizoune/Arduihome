@@ -5,6 +5,8 @@
 
 <script src="<?php echo base_url(); ?>assets/blockly/msg/js/fr.js"></script>
 
+<script src="<?php echo base_url(); ?>assets/blockly/php_compressed.js"></script>
+
 <div id="blocklyDiv" style="height: 700px; width: 100%;"></div>
 
   <xml id="toolbox" style="display: none">
@@ -305,26 +307,39 @@
 
     <category name="Domotique" colour="20">
       <block type="commande_domo"></block>
+     <block type="valeur_domo"></block>
     </category>
   </xml>
 
-
+  <div id="code">Code</div>
 
 <script>
   var workspace = Blockly.inject('blocklyDiv',
       {toolbox: document.getElementById('toolbox')});
 
-var mathChangeJson = {
+    function myUpdateFunction(event) {
+
+      var code = Blockly.PHP.workspaceToCode(workspace);
+        console.log(code);
+      $('#code').html(code);
+    }
+    workspace.addChangeListener(myUpdateFunction);
+
+
+
+var actionJson = {
   "type": "example_dropdown",
   "message0": "Commande: %1",
-  "output": null,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
   "args0": [
     {
       "type": "field_dropdown",
       "name": "FIELDNAME",
       "options": [
       	<?php foreach($commandes as $commande){ 
-			echo '[ "'.$commande->zone.' / '.$commande->peripherique.' / '.$commande->nom.'", "ITEM'.$commande->id.'" ],';
+			echo '[ "'.$commande->zone.' / '.$commande->peripherique.' / '.$commande->nom.'", "'.$commande->id.'" ],';
       	 } ?>
 
       ]
@@ -335,14 +350,57 @@ var mathChangeJson = {
 
 Blockly.Blocks['commande_domo'] = {
   init: function() {
-    this.jsonInit(mathChangeJson);
+    this.jsonInit(actionJson);
+    // Assign 'this' to a variable for use in the tooltip closure below.
+    var thisBlock = this; 
+
+   /* this.setTooltip(function() {
+      return 'Add a number to variable "%1".'.replace('%1', thisBlock.getFieldValue('FIELDNAME'));
+    });*/
+  }
+};
+
+
+Blockly.PHP['commande_domo'] = function(block) {
+  var code = 'sendCommande()\;';
+  return [code, Blockly.PHP.ORDER_MEMBER];
+};
+
+
+var valeurJson = {
+  "type": "example_dropdown",
+  "message0": "Valeur: %1",
+  "output": null,
+  "colour": 85,
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "FIELDNAME",
+      "options": [
+        <?php foreach($peripheriques as $peripherique){ 
+      echo '[ "'.$peripherique->zone.' / '.$peripherique->nom.'", "'.$peripherique->id.'" ],';
+         } ?>
+
+      ]
+    }
+  ],
+
+};
+
+Blockly.Blocks['valeur_domo'] = {
+  init: function() {
+    this.jsonInit(valeurJson);
     // Assign 'this' to a variable for use in the tooltip closure below.
     var thisBlock = this;
-    this.setTooltip(function() {
-      return 'Add a number to variable "%1".'.replace('%1',
-          thisBlock.getFieldValue('VAR'));
-    });
+    /*this.setTooltip(function() {
+      return 'Add a number to variable "%1".'.replace('%1',thisBlock.getFieldValue('VAR'));
+    });*/
   }
+};
+
+Blockly.PHP['valeur_domo'] = function(block) {
+  var code = 'getValue()';
+  return [code, Blockly.PHP.ORDER_MEMBER];
 };
 
 
