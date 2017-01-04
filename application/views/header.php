@@ -58,7 +58,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo site_url('scenario/index'); ?>">Scénarios </a>
+          <a class="nav-link" href="<?php echo site_url('admin/scenario'); ?>">Scénarios </a>
         </li>
 
           <li class="nav-item dropdown">

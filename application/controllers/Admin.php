@@ -3,16 +3,13 @@
 class Admin extends CI_Controller{
 
 	public function peripherique(){
-
 			$crud = new grocery_CRUD();
-
 			$crud->set_theme('datatables');
 			$crud->set_table('peripherique');
 			$crud->set_subject('peripherique');
 			$crud->set_relation('id_type_peripherique','type_peripherique','type');
 			$crud->set_relation('id_zone','zone','zone');
 			$crud->set_relation('id_fonction','fonction','fonction');
-
 			$output = $crud->render();
 
 			$this->load->view('header', $output);
@@ -22,17 +19,15 @@ class Admin extends CI_Controller{
 
 	public function scheduler(){
 			$crud = new grocery_CRUD();
-
 			$crud->set_theme('datatables');
 			$crud->set_model('Commande_crud_model');
 			$crud->set_table('planification');
 			$crud->set_subject('actions panifiées');
 			$crud->add_action('Activer/Desactiver', '', 'admin/activeScheduler', 'ui-icon-power');
 			$crud->set_relation_n_n('commandes', 'commande_planifiees', 'commande', 'id_planification', 'id_commande', 'nom');
-
 			$output = $crud->render();
 
-			$this->load->view('header');
+			$this->load->view('header', $output);
 			$this->load->view('admin', $output);
 			$this->load->view('footer');
 	}
@@ -58,5 +53,20 @@ class Admin extends CI_Controller{
 			}
 
 			redirect('admin/scheduler');
+	}
+
+	public function scenario(){
+			
+			$crud = new grocery_CRUD();
+			$crud->set_theme('datatables');
+			$crud->set_table('scenario');
+			$crud->set_subject('scénario');
+			$crud->add_action('Editer le scénario', '', 'scenario/edit', 'ui-icon-edit');
+			$crud->fields('nom','priorite');
+			$output = $crud->render();
+
+			$this->load->view('header', $output);
+			$this->load->view('admin', $output);
+			$this->load->view('footer');
 	}
 }

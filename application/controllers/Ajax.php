@@ -6,4 +6,9 @@ class Ajax extends CI_Controller {
 
 			$this->commande_model->sendCommande($_id_commande);
 	}
+
+
+	public function save_scenario(){
+		print_r($this->input->post());
+	}
 }

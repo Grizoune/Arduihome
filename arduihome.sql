@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 02, 2017 at 09:03 PM
+-- Generation Time: Jan 04, 2017 at 10:16 PM
 -- Server version: 5.7.16-0ubuntu0.16.10.1
 -- PHP Version: 7.0.8-3ubuntu3
 
@@ -129,14 +129,14 @@ CREATE TABLE `peripherique` (
   `target` varchar(45) NOT NULL,
   `favoris` tinyint(1) NOT NULL DEFAULT '0',
   `last_heartbeat` datetime DEFAULT NULL,
-  `etat` varchar(45) DEFAULT NULL
+  `valeur` int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `peripherique`
 --
 
-INSERT INTO `peripherique` (`id`, `id_type_peripherique`, `id_zone`, `id_fonction`, `nom`, `masque`, `target`, `favoris`, `last_heartbeat`, `etat`) VALUES
+INSERT INTO `peripherique` (`id`, `id_type_peripherique`, `id_zone`, `id_fonction`, `nom`, `masque`, `target`, `favoris`, `last_heartbeat`, `valeur`) VALUES
 (1, 1, 1, 2, 'Lumiere table', 0, 'xpl-ardui.relais', 0, NULL, NULL),
 (2, 2, 2, 4, 'Volet bureau', 0, 'xpl-ardui.relais', 0, NULL, NULL),
 (3, 1, 3, 1, 'Sous toiture', 0, 'xpl-ardui.relais', 0, NULL, NULL),
@@ -166,6 +166,27 @@ CREATE TABLE `planification` (
 INSERT INTO `planification` (`id`, `nom`, `interval`, `active`, `last_exec`, `next_exec`, `dead`) VALUES
 (1, 'Allumage du sapin', 'T120S', 0, '2017-01-01 22:25:01', '2017-01-01 22:27:01', NULL),
 (2, 'Extinction du sapin', 'T120S', 0, '2017-01-01 22:24:01', '2017-01-01 22:26:01', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `scenario`
+--
+
+CREATE TABLE `scenario` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(45) NOT NULL,
+  `priorite` int(2) NOT NULL DEFAULT '1',
+  `code` text,
+  `xml` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `scenario`
+--
+
+INSERT INTO `scenario` (`id`, `nom`, `priorite`, `code`, `xml`) VALUES
+(1, 'Gestion alarme', 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -265,6 +286,12 @@ ALTER TABLE `planification`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `scenario`
+--
+ALTER TABLE `scenario`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `type_peripherique`
 --
 ALTER TABLE `type_peripherique`
@@ -305,6 +332,11 @@ ALTER TABLE `peripherique`
 --
 ALTER TABLE `planification`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `scenario`
+--
+ALTER TABLE `scenario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `type_peripherique`
 --
