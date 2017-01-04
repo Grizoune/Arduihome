@@ -362,15 +362,16 @@ Blockly.Blocks['commande_domo'] = {
 
 
 Blockly.PHP['commande_domo'] = function(block) {
-  var code = 'sendCommande()\;';
-  return [code, Blockly.PHP.ORDER_MEMBER];
+  var val = block.getFieldValue('FIELDNAME');
+  var code = '$this->commande_model->sendCommande('+val+')\;';
+  return code;
 };
 
 
 var valeurJson = {
   "type": "example_dropdown",
   "message0": "Valeur: %1",
-  "output": null,
+  "output": "Number",
   "colour": 85,
   "args0": [
     {
@@ -399,7 +400,9 @@ Blockly.Blocks['valeur_domo'] = {
 };
 
 Blockly.PHP['valeur_domo'] = function(block) {
-  var code = 'getValue()';
+  var val = block.getFieldValue('FIELDNAME');
+  var code = '$this->peripherique_model->getValue('+val+')';
+
   return [code, Blockly.PHP.ORDER_MEMBER];
 };
 

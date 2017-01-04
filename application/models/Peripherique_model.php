@@ -24,4 +24,10 @@ class Peripherique_model extends CI_Model{
 		$obj->commandes = $this->db->where('id_peripherique', $obj->id)->get('commande')->result();
 		return $obj;
 	}
+
+	public function getValue($_id){
+
+		$perif = $this->find($_id);
+		return $perif->valeur;
+	}
 }
