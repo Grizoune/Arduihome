@@ -1,5 +1,5 @@
  <xml id="toolbox" style="display: none">
-    <category name="{catLogic}" colour="210">
+    <category name="Logique" colour="210">
       <block type="controls_if"></block>
       <block type="logic_compare"></block>
       <block type="logic_operation"></block>
@@ -8,7 +8,7 @@
       <block type="logic_null"></block>
       <block type="logic_ternary"></block>
     </category>
-    <category name="{catLoops}" colour="120">
+    <category name="Boucles" colour="120">
       <block type="controls_repeat_ext">
         <value name="TIMES">
           <shadow type="math_number">
@@ -37,7 +37,7 @@
       <block type="controls_forEach"></block>
       <block type="controls_flow_statements"></block>
     </category>
-    <category name="{catMath}" colour="230">
+    <category name="Math" colour="230">
       <block type="math_number"></block>
       <block type="math_arithmetic">
         <value name="A">
@@ -124,7 +124,7 @@
       </block>
       <block type="math_random_float"></block>
     </category>
-    <category name="{catText}" colour="160">
+    <category name="Texte" colour="160">
       <block type="text"></block>
       <block type="text_join"></block>
       <block type="text_append">
@@ -291,11 +291,16 @@
       </block>
     </category>
     <sep></sep>
-    <category name="{catVariables}" colour="330" custom="VARIABLE"></category>
-    <category name="{catFunctions}" colour="290" custom="PROCEDURE"></category>
+    <category name="Variables" colour="330" custom="VARIABLE"></category>
+    <category name="Fonctions" colour="290" custom="PROCEDURE"></category>
 
     <category name="Domotique" colour="20">
-      <block type="commande_domo"></block>
-     <block type="valeur_domo"></block>
+      <block type="commande_domo">
+
+      </block>
+     <block type="valeur_domo">
+      </block>
+
+     
     </category>
   </xml>

@@ -10,4 +10,11 @@ class Scenario_model extends CI_Model{
 			->get('scenario')
 			->row();
 	}
+
+	public function save($_id, $data){
+
+		$this->db->where('id', $_id);
+		$this->db->update('scenario', $data); 
+
+	}
 }

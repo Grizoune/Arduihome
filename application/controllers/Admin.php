@@ -61,7 +61,7 @@ class Admin extends CI_Controller{
 			$crud->set_theme('datatables');
 			$crud->set_table('scenario');
 			$crud->set_subject('scénario');
-			$crud->add_action('Editer le scénario', '', 'scenario/edit', 'ui-icon-edit');
+			$crud->add_action('Editer le scénario', '', 'scenario/edit', 'ui-icon-script');
 			$crud->fields('nom','priorite');
 			$output = $crud->render();
 

@@ -8,7 +8,8 @@ class Ajax extends CI_Controller {
 	}
 
 
-	public function save_scenario(){
-		print_r($this->input->post());
+	public function save_scenario($_id_scenario){
+		$this->load->model('scenario_model');
+		$this->scenario_model->save($_id_scenario, $this->input->post());
 	}
 }
