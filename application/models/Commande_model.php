@@ -26,8 +26,9 @@ class Commande_model extends CI_Model{
 	}
 
 
-	public function sendCommande($id_commande){
+	public function sendCommandeByIdCommande($id_commande){
 		$obj = $this->db
+					->select('*.c, *.t, *.p, p.id as perif_id')
 					->join('peripherique p', 'p.id = c.id_peripherique')
 					->join('type_peripherique t', 't.id = p.id_type_peripherique')
 					->where('c.id', $id_commande)
@@ -36,6 +37,24 @@ class Commande_model extends CI_Model{
 		
 		$this->load->model('xpl_message'); 
 		$xpl_message = new xpl_message();
+		$xpl_message->send('xpl-cmnd', $obj->target, $obj->type_message, $obj->nouvelle_valeur);
+
+		$this->peripherique_model->updateValeurPeripherique($obj->perif_id,$obj->perif_id);
+	}
+
+	public function sendCommandeByPerifAndValeur($id_peripherique,$valeur){
+		$obj = $this->db
+					->join('peripherique p', 'p.id = c.id_peripherique')
+					->join('type_peripherique t', 't.id = p.id_type_peripherique')
+					->where('p.id', $id_peripherique)
+					->where('c.nouvelle_valeur', $valeur)
+					->get('commande c')
+					->row();
+		
+		$this->load->model('xpl_message'); 
+		$xpl_message = new xpl_message();
 		$xpl_message->send('xpl-cmnd', $obj->target, $obj->type_message, $obj->contenu);
+
+		$this->peripherique_model->updateValeurPeripherique($id_peripherique,$valeur);
 	}
 }

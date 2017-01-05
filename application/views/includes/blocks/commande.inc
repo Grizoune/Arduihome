@@ -31,6 +31,7 @@ Blockly.Blocks['commande_domo'] = {
 
 Blockly.PHP['commande_domo'] = function(block) {
   var val = block.getFieldValue('VAR_ACTION');
-  var code = '$this->commande_model->sendCommande('+val+')\;';
+  var code = '$this->sendCommande('+val+')\;';
   return code;
 };
+

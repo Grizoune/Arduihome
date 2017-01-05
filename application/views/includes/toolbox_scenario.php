@@ -295,12 +295,8 @@
     <category name="Fonctions" colour="290" custom="PROCEDURE"></category>
 
     <category name="Domotique" colour="20">
-      <block type="commande_domo">
-
-      </block>
-     <block type="valeur_domo">
-      </block>
-
-     
+      <block type="commande_domo"></block>
+       <block type="valeur_domo"></block>  
+      <block type="heure_domo"></block>    
     </category>
   </xml>

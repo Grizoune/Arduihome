@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 04, 2017 at 10:16 PM
+-- Generation Time: Jan 05, 2017 at 11:08 PM
 -- Server version: 5.7.16-0ubuntu0.16.10.1
 -- PHP Version: 7.0.8-3ubuntu3
 
@@ -30,24 +30,25 @@ CREATE TABLE `commande` (
   `id` int(11) NOT NULL,
   `id_peripherique` int(11) NOT NULL,
   `nom` varchar(45) NOT NULL,
-  `contenu` text NOT NULL
+  `contenu` text NOT NULL,
+  `nouvelle_valeur` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `commande`
 --
 
-INSERT INTO `commande` (`id`, `id_peripherique`, `nom`, `contenu`) VALUES
-(1, 1, 'ON', 'id_group=21876562\r\nid_bouton=0\r\netat=true'),
-(2, 1, 'OFF', 'id_group=21876562\r\nid_bouton=0\r\netat=false'),
-(3, 2, 'UP', 'id_group=21220650\r\nid_bouton=1\r\netat=false'),
-(4, 2, 'DOWN', 'id_group=21220650\r\nid_bouton=1\r\netat=true'),
-(5, 3, 'ON', 'id_group=21876562\r\nid_bouton=1\r\netat=true'),
-(6, 3, 'OFF', 'id_group=21876562\r\nid_bouton=1\r\netat=false'),
-(7, 4, 'ON', 'id_group=21876562\nid_bouton=2\netat=true'),
-(8, 4, 'OFF', 'id_group=21876562\nid_bouton=2\netat=false'),
-(9, 5, 'ON', 'id_group=23761518\nid_bouton=0\netat=true'),
-(10, 5, 'OFF', 'id_group=23761518\nid_bouton=0\netat=false');
+INSERT INTO `commande` (`id`, `id_peripherique`, `nom`, `contenu`, `nouvelle_valeur`) VALUES
+(1, 1, 'ON', 'id_group=21876562\r\nid_bouton=0\r\netat=true', 1),
+(2, 1, 'OFF', 'id_group=21876562\r\nid_bouton=0\r\netat=false', 0),
+(3, 2, 'UP', 'id_group=21220650\r\nid_bouton=1\r\netat=false', 0),
+(4, 2, 'DOWN', 'id_group=21220650\r\nid_bouton=1\r\netat=true', 1),
+(5, 3, 'ON', 'id_group=21876562\r\nid_bouton=1\r\netat=true', 1),
+(6, 3, 'OFF', 'id_group=21876562\r\nid_bouton=1\r\netat=false', 0),
+(7, 4, 'ON', 'id_group=21876562\nid_bouton=2\netat=true', 1),
+(8, 4, 'OFF', 'id_group=21876562\nid_bouton=2\netat=false', 0),
+(9, 5, 'ON', 'id_group=23761518\nid_bouton=0\netat=true', 1),
+(10, 5, 'OFF', 'id_group=23761518\nid_bouton=0\netat=false', 0);
 
 -- --------------------------------------------------------
 
@@ -100,7 +101,8 @@ INSERT INTO `fonction` (`id`, `fonction`, `id_zone`) VALUES
 (2, 'Eclairage table', 1),
 (3, 'Sapin', 1),
 (4, 'Volet Roulant', 2),
-(5, 'test', NULL);
+(5, 'test', NULL),
+(6, 'Alarme', 5);
 
 -- --------------------------------------------------------
 
@@ -138,10 +140,11 @@ CREATE TABLE `peripherique` (
 
 INSERT INTO `peripherique` (`id`, `id_type_peripherique`, `id_zone`, `id_fonction`, `nom`, `masque`, `target`, `favoris`, `last_heartbeat`, `valeur`) VALUES
 (1, 1, 1, 2, 'Lumiere table', 0, 'xpl-ardui.relais', 0, NULL, NULL),
-(2, 2, 2, 4, 'Volet bureau', 0, 'xpl-ardui.relais', 0, NULL, NULL),
+(2, 2, 2, 4, 'Volet bureau', 0, 'xpl-ardui.relais', 0, NULL, 1),
 (3, 1, 3, 1, 'Sous toiture', 0, 'xpl-ardui.relais', 0, NULL, NULL),
 (4, 1, 1, 3, 'Sapin', 0, 'xpl-ardui.relais', 0, NULL, NULL),
-(5, 1, 4, 5, 'Prise bureau', 0, 'xpl-ardui.relais', 0, NULL, NULL);
+(5, 1, 4, 5, 'Prise bureau', 0, 'xpl-ardui.relais', 0, NULL, NULL),
+(6, 3, 1, 6, 'Alarme maison', 0, 'xpl-ardui.alarme', 1, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -186,7 +189,8 @@ CREATE TABLE `scenario` (
 --
 
 INSERT INTO `scenario` (`id`, `nom`, `priorite`, `code`, `xml`) VALUES
-(1, 'Gestion alarme', 1, NULL, NULL);
+(1, 'Gestion alarme', 1, 'if ($this->getValeur(6) == 1) {\n  $this->sendCommande(4);}\n', '<xml xmlns="http://www.w3.org/1999/xhtml"><block type="controls_if" id="1v4o#*PLQ.!CD^wTM*?J" x="763" y="151"><value name="IF0"><block type="logic_compare" id="k9JqBp[me.nwk@IaK`Aa"><field name="OP">EQ</field><value name="A"><block type="valeur_domo" id="Qq/Dy5=o=;loUhccT:.o"><field name="VAR_VALEUR">6</field></block></value><value name="B"><block type="math_number" id="sGK{Z*$[[}aIPDIY.TiS"><field name="NUM">1</field></block></value></block></value><statement name="DO0"><block type="commande_domo" id="Rc:OU{Ag*hDp|R^LYR_f"><field name="VAR_ACTION">4</field></block></statement></block></xml>'),
+(2, 'Fermeture automatique volet', 2, 'if (false) {\n}\n', 'PHhtbCB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94aHRtbCI PGJsb2NrIHR5cGU9ImNvbnRyb2xzX2lmIiBpZD0iQnpzT2lfSXctOldDekk/cy18XlsiIHg9Ijc5MCIgeT0iMTAwIj48L2Jsb2NrPjwveG1sPg==');
 
 -- --------------------------------------------------------
 
@@ -206,7 +210,8 @@ CREATE TABLE `type_peripherique` (
 
 INSERT INTO `type_peripherique` (`id`, `type`, `type_message`) VALUES
 (1, 'Prise commandée', 'homeeasy.basic'),
-(2, 'Volet roulant', 'homeeasy.basic');
+(2, 'Volet roulant', 'homeeasy.basic'),
+(3, 'Capteur', 'sensor.basic');
 
 -- --------------------------------------------------------
 
@@ -228,7 +233,8 @@ INSERT INTO `zone` (`id`, `zone`, `image`) VALUES
 (1, 'Cuisine/Salon', 'canape'),
 (2, 'Bureau Lucie', 'bureau'),
 (3, 'Jardin', 'jardin'),
-(4, 'Bureau Sylvain', 'bureau');
+(4, 'Bureau Sylvain', 'bureau'),
+(5, 'Garage', 'garage');
 
 --
 -- Indexes for dumped tables
@@ -316,7 +322,7 @@ ALTER TABLE `commande`
 -- AUTO_INCREMENT for table `fonction`
 --
 ALTER TABLE `fonction`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `groupe`
 --
@@ -326,7 +332,7 @@ ALTER TABLE `groupe`
 -- AUTO_INCREMENT for table `peripherique`
 --
 ALTER TABLE `peripherique`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `planification`
 --
@@ -336,17 +342,17 @@ ALTER TABLE `planification`
 -- AUTO_INCREMENT for table `scenario`
 --
 ALTER TABLE `scenario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `type_peripherique`
 --
 ALTER TABLE `type_peripherique`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `zone`
 --
 ALTER TABLE `zone`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Constraints for dumped tables
 --

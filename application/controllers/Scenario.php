@@ -13,4 +13,9 @@ class Scenario extends CI_Controller {
 				));
 			$this->load->view('footer');
 	}
+
+	public function forceExecute(){
+		$this->load->model('scenario_model');
+		$this->scenario_model->executeAll();
+	}
 }

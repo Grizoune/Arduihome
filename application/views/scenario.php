@@ -21,22 +21,29 @@
   <code id="code">Code</code>
 
 <script>
+
+  <?php 
+    include("includes/blocks/commande.inc");
+    include("includes/blocks/valeur.inc");
+    include("includes/blocks/heure.inc");
+  ?>
+
   var workspace = Blockly.inject('blocklyDiv',{toolbox: document.getElementById('toolbox')});
 
 	<?php if($scenario->xml != ""){ ?>
-	 var xml = Blockly.Xml.textToDom('<?php echo $scenario->xml; ?>');
+	 var xml = Blockly.Xml.textToDom(atob('<?php echo $scenario->xml; ?>'));
 	 Blockly.Xml.domToWorkspace(xml, workspace);
 	<?php } ?>
 
 	function saveScenario(){
 		var xml = Blockly.Xml.workspaceToDom(workspace);
 		var xml_text = Blockly.Xml.domToText(xml);
-    var code = Blockly.PHP.workspaceToCode(workspace);
+    	var code = Blockly.PHP.workspaceToCode(workspace);
 
 		$.ajax({
 		  type: "POST",
 		  url: "<?php echo site_url('ajax/save_scenario/'.$scenario->id); ?>",
-		  data: 'xml='+xml_text+'&code='+code,
+		  data: 'xml='+btoa(xml_text)+'&code='+code,
 		  dataType: "text"
 		}).done(function() {
 		  $(this).addClass( "done" );
@@ -59,10 +66,7 @@ var xml_text = Blockly.Xml.domToText(xml);*/
 Blockly.Xml.domToWorkspace(xml, workspace);*/
 
 
-  <?php 
-    include("includes/blocks/commande.inc");
-    include("includes/blocks/valeur.inc");
-  ?>
+
 
 
 

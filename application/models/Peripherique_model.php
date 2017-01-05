@@ -30,4 +30,11 @@ class Peripherique_model extends CI_Model{
 		$perif = $this->find($_id);
 		return $perif->valeur;
 	}
+
+	public function updateValeurPeripherique($_id_peripherique, $valeur){
+		$this->db
+				->set('valeur', $valeur)
+				->where('id', $_id_peripherique)
+				->update('peripherique');
+	}
 }

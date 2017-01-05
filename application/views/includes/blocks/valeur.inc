@@ -29,7 +29,7 @@ Blockly.Blocks['valeur_domo'] = {
 
 Blockly.PHP['valeur_domo'] = function(block) {
   var val = block.getFieldValue('VAR_VALEUR');
-  var code = '$this->peripherique_model->getValue('+val+')';
+  var code = '$this->getValeur('+val+')';
 
   return [code, Blockly.PHP.ORDER_MEMBER];
 };
