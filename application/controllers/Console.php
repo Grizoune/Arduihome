@@ -12,13 +12,12 @@ class Console extends CI_Controller{
 
 	public function listen()
 	{
-		$this->load->library('Serveur_XPL');
-	
+		//$this->load->library('Serveur_XPL');
+		
 		ini_set ('max_execution_time', 1200);
 		$start_time = time();
 
-		$this->load->library('Serveur_XPL');
-		$serveur = new Serveur_XPL();
+		//$serveur = new Serveur_XPL();
 		
 		//Create a UDP socket
 		if(!($sock = socket_create(AF_INET, SOCK_DGRAM, 0)))
@@ -42,46 +41,31 @@ class Console extends CI_Controller{
 		 
 		//Do some communication, this loop can handle multiple clients
 		while(1)
-		{
-
-		     
+		{	     
 		    //Receive some data
 		    $r = socket_recvfrom($sock, $buf, 512, 0, $remote_ip, $remote_port);
 			if($buf){
+				//ICI C EST LE COEUR DU REACTEUR
+				$this->db->reconnect();
+				$message = $this->parseMessage($buf);
 
-					
-				echo "data".$buf;
-				/*$this->db->reconnect();
-
-				$datas = explode("\n", $buf);
-				$type = $datas[0];
-				$source = $datas[3];
-				$target = $datas[4];
-				$message_type = $datas[6];
-				$cmds = array_slice($datas, 8, sizeof($datas)-10);
-				$tab_cmd = array();
-
-
-				foreach($cmds as $commande){
-					$lacmd = explode("=", $commande);
-					$tab_cmd[$lacmd[0]] =$lacmd[1];
+				//recherche du peripherique
+				if(isset($message->peripherique)){
+					$peripherique = $this->peripherique_model->find($message->peripherique);
+					if(isset($peripherique->id) && isset($message->valeur)){
+						//truc de ouf, on a trouvé un peripherique, on met à jour sa valeur
+						$this->peripherique_model->updateValeurPeripherique($peripherique->id, $message->valeur);
+						echo "mise à jour de la valeur de '".$peripherique->nom."', nouvelle valeur : ".$message->valeur;
+						$this->load->model('scenario_model');
+						//on relance tous les scenarios
+						$this->scenario_model->executeAll();
+						echo "fin de l'execution des scenarios";
+					}
 				}
-				
-				switch($type){
-					case 'xpl-trig':
-					case 'xpl-stat':
-						if($message_type == "hbeat.basic")
-							$serveur->make_hbeat($source);
-						else
-							$serveur->interprete($source, $message_type, $tab_cmd);
-					break;
-
-				}*/
 			}
-			
-			  if ((time() - $start_time) > 600) {
-			  socket_close($sock);
-			exit(0);
+			if ((time() - $start_time) > 600) {
+			    socket_close($sock);
+				exit(0);
 			}
 		}
 		 
@@ -137,5 +121,31 @@ class Console extends CI_Controller{
 		}
 		 
 		socket_close($sock);
+	}
+
+
+	public function parseMessage($buf){
+		$message = new StdClass();
+
+		$datas = explode("\n", $buf);
+		$message->type = $datas[0];
+		$message->source = $datas[3];
+		$message->target = $datas[4];
+		$message->message_type = $datas[6];
+		$cmds = array_slice($datas, 8, sizeof($datas)-10);
+		$message->commandes = array();
+
+
+		foreach($cmds as $commande){
+			$lacmd = explode("=", $commande);
+			$message->commandes[$lacmd[0]] =$lacmd[1];
+
+			if($lacmd[0] == "device")
+				$message->peripherique = (int)$lacmd[1];
+			if($lacmd[0] == "current")
+				$message->valeur = (int)$lacmd[1];
+		}
+
+		return $message;
 	}
 }

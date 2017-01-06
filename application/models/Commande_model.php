@@ -28,7 +28,7 @@ class Commande_model extends CI_Model{
 
 	public function sendCommandeByIdCommande($id_commande){
 		$obj = $this->db
-					->select('*.c, *.t, *.p, p.id as perif_id')
+					->select('c.*, t.*, p.*, p.id as perif_id')
 					->join('peripherique p', 'p.id = c.id_peripherique')
 					->join('type_peripherique t', 't.id = p.id_type_peripherique')
 					->where('c.id', $id_commande)

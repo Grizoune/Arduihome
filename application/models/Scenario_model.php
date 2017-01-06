@@ -56,7 +56,8 @@ class Scenario_model extends CI_Model{
 
 	public function execute($_id_scenario){
 			$scenar = $this->find($_id_scenario);
-			eval(base64_decode($scenar->code));
+			echo base64_decode($scenar->code);
+			//eval(base64_decode($scenar->code));
 	}
 
 	private function sendCommande($_id_commande){
