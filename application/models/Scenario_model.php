@@ -29,9 +29,11 @@ class Scenario_model extends CI_Model{
 			->result();
 	}
 
-	public function save($_id, $data){
+	public function save($_id, $datas){
+		foreach($datas as $key=>$data)
+				$datas[$key] = $data;
 		$this->db->where('id', $_id);
-		$this->db->update('scenario', $data); 
+		$this->db->update('scenario', $datas); 
 	}
 
 
@@ -54,7 +56,7 @@ class Scenario_model extends CI_Model{
 
 	public function execute($_id_scenario){
 			$scenar = $this->find($_id_scenario);
-			eval($scenar->code);
+			eval(base64_decode($scenar->code));
 	}
 
 	private function sendCommande($_id_commande){
@@ -72,5 +74,13 @@ class Scenario_model extends CI_Model{
 			if($this->peripheriques_valeurs[$peripherique->id] != $this->new_peripheriques_valeurs[$peripherique->id])
 				$this->commande_model->sendCommandeByPerifAndValeur($peripherique->id, $this->new_peripheriques_valeurs[$peripherique->id]);
 		}
+	}
+
+    private function encode($value)
+	{
+    $search = array("\\",  "\x00", "\n",  "\r",  "'",  '"', "\x1a");
+    $replace = array("\\\\","\\0","\\n", "\\r", "\'", '\"', "\\Z");
+
+    return str_replace($search, $replace, $value);
 	}
 }

@@ -31,7 +31,7 @@
   var workspace = Blockly.inject('blocklyDiv',{toolbox: document.getElementById('toolbox')});
 
 	<?php if($scenario->xml != ""){ ?>
-	 var xml = Blockly.Xml.textToDom(atob('<?php echo $scenario->xml; ?>'));
+	 var xml = Blockly.Xml.textToDom('<?php echo $scenario->xml; ?>');
 	 Blockly.Xml.domToWorkspace(xml, workspace);
 	<?php } ?>
 
@@ -43,10 +43,10 @@
 		$.ajax({
 		  type: "POST",
 		  url: "<?php echo site_url('ajax/save_scenario/'.$scenario->id); ?>",
-		  data: 'xml='+btoa(xml_text)+'&code='+code,
+		  data: 'xml='+xml_text+'&code='+btoa(code),
 		  dataType: "text"
 		}).done(function() {
-		  $(this).addClass( "done" );
+		  alert( "Sauvegarde reussie !" );
 		});
 	}
 
