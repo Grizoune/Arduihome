@@ -9,10 +9,7 @@ class Scenario_model extends CI_Model{
 	public function __construct(){
 		parent::__construct();
 
-		foreach($this->peripherique_model->findAll() as $peripherique)
-				$this->peripheriques_valeurs[$peripherique->id] = $peripherique->valeur;	
 
-		$this->new_peripheriques_valeurs = $this->peripheriques_valeurs;	
 	}
 
 	public function find($_id){
@@ -38,25 +35,21 @@ class Scenario_model extends CI_Model{
 
 
 	public function executeAll(){
-					echo "<pre>";
-			print_r($this->peripheriques_valeurs);
-			echo "</pre>";
+			foreach($this->peripherique_model->findAll() as $peripherique)
+				$this->peripheriques_valeurs[$peripherique->id] = $peripherique->valeur;	
+
+			$this->new_peripheriques_valeurs = $this->peripheriques_valeurs;	
 
 			foreach($this->findAllActifs() as $scenario)
 				$this->execute($scenario->id);
 
 			$this->executeCommandes();
-
-						echo "<pre>";
-			print_r($this->new_peripheriques_valeurs);
-			echo "</pre>";
 	}
-
 
 
 	public function execute($_id_scenario){
 			$scenar = $this->find($_id_scenario);
-			echo base64_decode($scenar->code);
+			eval($scenar->code);
 			//eval(base64_decode($scenar->code));
 	}
 
@@ -72,8 +65,10 @@ class Scenario_model extends CI_Model{
 	public function executeCommandes(){
 		foreach($this->peripherique_model->findAll() as $peripherique){
 
-			if($this->peripheriques_valeurs[$peripherique->id] != $this->new_peripheriques_valeurs[$peripherique->id])
+			if($this->peripheriques_valeurs[$peripherique->id] != $this->new_peripheriques_valeurs[$peripherique->id]){
 				$this->commande_model->sendCommandeByPerifAndValeur($peripherique->id, $this->new_peripheriques_valeurs[$peripherique->id]);
+				echo "send modification valeur perif : ".$peripherique->id.", nouvelle valeur : ".$this->new_peripheriques_valeurs[$peripherique->id]."\n";
+			}
 		}
 	}
 

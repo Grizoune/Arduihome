@@ -45,6 +45,7 @@ class Console extends CI_Controller{
 		    //Receive some data
 		    $r = socket_recvfrom($sock, $buf, 512, 0, $remote_ip, $remote_port);
 			if($buf){
+				//echo $buf;
 				//ICI C EST LE COEUR DU REACTEUR
 				$this->db->reconnect();
 				$message = $this->parseMessage($buf);
@@ -55,11 +56,10 @@ class Console extends CI_Controller{
 					if(isset($peripherique->id) && isset($message->valeur)){
 						//truc de ouf, on a trouvé un peripherique, on met à jour sa valeur
 						$this->peripherique_model->updateValeurPeripherique($peripherique->id, $message->valeur);
-						echo "mise à jour de la valeur de '".$peripherique->nom."', nouvelle valeur : ".$message->valeur;
+						echo date('Y-m-d H:i:s')." : mise à jour de la valeur de '".$peripherique->nom."', nouvelle valeur : ".$message->valeur."\n";
 						$this->load->model('scenario_model');
-						//on relance tous les scenarios
+						//on relance tous les scenarios*
 						$this->scenario_model->executeAll();
-						echo "fin de l'execution des scenarios";
 					}
 				}
 			}
@@ -138,12 +138,15 @@ class Console extends CI_Controller{
 
 		foreach($cmds as $commande){
 			$lacmd = explode("=", $commande);
-			$message->commandes[$lacmd[0]] =$lacmd[1];
 
-			if($lacmd[0] == "device")
-				$message->peripherique = (int)$lacmd[1];
-			if($lacmd[0] == "current")
-				$message->valeur = (int)$lacmd[1];
+			if(strstr($commande, "=")){
+				$message->commandes[$lacmd[0]] =$lacmd[1];
+
+				if($lacmd[0] == "device")
+					$message->peripherique = (int)$lacmd[1];
+				if($lacmd[0] == "current")
+					$message->valeur = (int)$lacmd[1];
+			}
 		}
 
 		return $message;

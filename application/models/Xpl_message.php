@@ -11,12 +11,14 @@ class Xpl_Message{
   public $xPLSchema;
   public $xPLBody;
 	
-	public function send($_type, $_target, $_schema, $_body){
+	public function init($_type, $_target, $_schema, $_body){
 		$this->xPLType = $_type;
 		$this->xPLTarget = $_target;
 		$this->xPLSchema = $_schema;
 		$this->xPLBody = $_body;
+	}
 
+	public function send(){
 	
 			if( !function_exists( 'socket_create' ) )
 		  {

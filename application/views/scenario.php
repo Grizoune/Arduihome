@@ -39,11 +39,11 @@
 		var xml = Blockly.Xml.workspaceToDom(workspace);
 		var xml_text = Blockly.Xml.domToText(xml);
     	var code = Blockly.PHP.workspaceToCode(workspace);
-
+//data: 'xml='+xml_text+'&code='+btoa(code),
 		$.ajax({
 		  type: "POST",
 		  url: "<?php echo site_url('ajax/save_scenario/'.$scenario->id); ?>",
-		  data: 'xml='+xml_text+'&code='+btoa(code),
+		  data: 'xml='+xml_text+'&code='+code,
 		  dataType: "text"
 		}).done(function() {
 		  alert( "Sauvegarde reussie !" );

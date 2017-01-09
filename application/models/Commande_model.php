@@ -36,8 +36,8 @@ class Commande_model extends CI_Model{
 					->row();
 		
 		$this->load->model('xpl_message'); 
-		$xpl_message = new xpl_message();
-		$xpl_message->send('xpl-cmnd', $obj->target, $obj->type_message, $obj->nouvelle_valeur);
+		$this->xpl_message->init('xpl-cmnd', $obj->target, $obj->type_message, $obj->contenu);
+		$this->xpl_message->send();
 
 		$this->peripherique_model->updateValeurPeripherique($obj->perif_id,$obj->perif_id);
 	}
@@ -52,8 +52,8 @@ class Commande_model extends CI_Model{
 					->row();
 		
 		$this->load->model('xpl_message'); 
-		$xpl_message = new xpl_message();
-		$xpl_message->send('xpl-cmnd', $obj->target, $obj->type_message, $obj->contenu);
+		$this->xpl_message->init('xpl-cmnd', $obj->target, $obj->type_message, $obj->contenu);
+		$this->xpl_message->send();
 
 		$this->peripherique_model->updateValeurPeripherique($id_peripherique,$valeur);
 	}
