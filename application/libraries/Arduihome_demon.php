@@ -14,6 +14,7 @@ class Arduihome_demon
 			$this->db =& get_instance();
 			require('Arduihome_log.php');
 			$this->log = new Arduihome_log();
+			$this->log->write("infos", "Lancement du serveur");
 			
 			ini_set ('max_execution_time', 1200);
 			$start_time = time();
@@ -77,6 +78,7 @@ class Arduihome_demon
 			}
 			 
 			socket_close($sock);
+			$this->log->write("infos", "process serveur terminé");
 		}
 
 		private function parseMessage($buf){

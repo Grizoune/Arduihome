@@ -5,6 +5,7 @@ body {
 .navbar-dark{
 	background-color: #222222!important;
 	padding: 0px;
+	width: 100%;
 }
 
 .navbar-dark li a{ 
@@ -83,3 +84,10 @@ body {
 	overflow: scroll;
 	direction: ltr;
 }
+
+#demon-statut{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+

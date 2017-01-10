@@ -49,9 +49,7 @@
 
       <a class="navbar-brand" href="<?php echo site_url(); ?>"><img src="<?php echo base_url(); ?>/assets/img/arduihome.gif" /></a>
 
-      <ul class="nav navbar-nav">
-
-
+      <ul class="nav navbar-nav mr-auto">
 
         <li class="nav-item active">
           <a class="nav-link" href="<?php echo site_url('dashboard/index'); ?>">Dashboard <span class="sr-only">(current)</span></a>
@@ -79,6 +77,10 @@
           </div>
         </li>
       </ul>
+
+      <a href="#" onclick="restartServeur();" class="btn" id="demon-statut">
+          Demond status
+      </a>
     </nav>
 
     <div class="container-fluid">

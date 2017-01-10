@@ -22,4 +22,18 @@ class Ajax extends CI_Controller {
 		echo $content;
 	}
 
+	public function demondStatus(){
+
+		header("Access-Control-Allow-Origin: *");              // Tous les domaines
+
+		$this->load->library('Arduihome_demon');
+		echo $this->arduihome_demon->getStatut();
+	}
+
+	public function startServeur(){
+		$this->load->library('Arduihome_demon');
+		if($this->arduihome_demon->getStatut() ==0)
+				$this->arduihome_demon->startProcess();
+	}
+
 }
