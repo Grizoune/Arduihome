@@ -67,7 +67,7 @@ class Scenario_model extends CI_Model{
 
 			if($this->peripheriques_valeurs[$peripherique->id] != $this->new_peripheriques_valeurs[$peripherique->id]){
 				$this->commande_model->sendCommandeByPerifAndValeur($peripherique->id, $this->new_peripheriques_valeurs[$peripherique->id]);
-				$this->Arduino_log->write('infos',"send modification valeur perif : ".$peripherique->id.", nouvelle valeur : ".$this->new_peripheriques_valeurs[$peripherique->id]);
+				$this->Arduino_log->write('infos',"Modification automatique de : ".$peripherique->nom.", nouvelle valeur : ".$this->new_peripheriques_valeurs[$peripherique->id]);
 			}
 		}
 	}

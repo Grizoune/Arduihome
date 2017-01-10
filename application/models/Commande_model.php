@@ -28,18 +28,14 @@ class Commande_model extends CI_Model{
 
 	public function sendCommandeByIdCommande($id_commande){
 		$obj = $this->db
-					->select('c.*, t.*, p.*, p.id as perif_id')
 					->join('peripherique p', 'p.id = c.id_peripherique')
 					->join('type_peripherique t', 't.id = p.id_type_peripherique')
 					->where('c.id', $id_commande)
 					->get('commande c')
 					->row();
-		
-		$this->load->model('xpl_message'); 
-		$this->xpl_message->init('xpl-cmnd', $obj->target, $obj->type_message, $obj->contenu);
-		$this->xpl_message->send();
 
-		$this->peripherique_model->updateValeurPeripherique($obj->perif_id,$obj->perif_id);
+		$this->sendCommande($obj);
+
 	}
 
 	public function sendCommandeByPerifAndValeur($id_peripherique,$valeur){
@@ -51,10 +47,17 @@ class Commande_model extends CI_Model{
 					->get('commande c')
 					->row();
 		
+		$this->sendCommande($obj);
+	}
+
+	private function sendCommande($commande){
 		$this->load->model('xpl_message'); 
-		$this->xpl_message->init('xpl-cmnd', $obj->target, $obj->type_message, $obj->contenu);
+		$this->xpl_message->init('xpl-cmnd', $commande->target, $commande->type_message, $commande->contenu);
 		$this->xpl_message->send();
 
-		$this->peripherique_model->updateValeurPeripherique($id_peripherique,$valeur);
+		$this->load->library('Arduihome_log');
+		$this->arduihome_log->write("infos", "Envoi de la commande du perif : ".$commande->id_peripherique.", nouvelle valeur ".$commande->nouvelle_valeur);
+
+		$this->peripherique_model->updateValeurPeripherique($commande->id_peripherique,$commande->nouvelle_valeur);
 	}
 }

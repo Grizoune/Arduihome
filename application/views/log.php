@@ -9,6 +9,9 @@ function load_log(){
 	}).done(function( data ) {
 		$('#zone-log').html(data);
 	});
+
+$('#zone-log').scrollTop($('#zone-log').height()+800);
+
 }
 
 $(function () {

@@ -13,5 +13,6 @@ class Serveur extends CI_Controller{
 	public function start()
 	{
 		$this->load->library('Arduihome_demon');
+		$this->arduihome_demon->build_demon();
 	}
 }

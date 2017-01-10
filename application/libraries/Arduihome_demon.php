@@ -7,6 +7,10 @@ class Arduihome_demon
 		private $log;
 
 		public function __construct(){
+
+		}
+
+		public function build_demon(){
 			$this->db =& get_instance();
 			require('Arduihome_log.php');
 			$this->log = new Arduihome_log();
@@ -101,5 +105,22 @@ class Arduihome_demon
 			}
 
 		return $message;
-	}
+		}
+
+
+		public function getStatut(){
+
+			exec("ps -ef | grep 'index.php serveur start'", $process);
+
+			if(sizeof($process) > 2)
+				return true;
+			else
+				return false;
+		}
+
+		public function startProcess(){
+			set_time_limit(3);
+			exec("php ".FCPATH."/index.php serveur start >> /dev/null");
+			echo "serveur started !";
+		}
 }

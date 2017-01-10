@@ -75,4 +75,11 @@ class Admin extends CI_Controller{
 			$this->load->view('log', array('type'=>$type));
 			$this->load->view('footer');
 	}
+
+
+	public function serveur_statut(){
+			$this->load->library('Arduihome_demon');
+			//$this->arduihome_demon->startProcess();
+			echo $this->arduihome_demon->getStatut();
+	}
 }

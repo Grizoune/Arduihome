@@ -3,8 +3,7 @@
 class Ajax extends CI_Controller {
 	
 	public function sendCommande($_id_commande){
-			$this->load->library('Arduihome_log');
-			$this->arduihome_log->write("infos", "Envoi manuel de la commande ".$_id_commande);
+
 			$this->commande_model->sendCommandeByIdCommande($_id_commande);
 	}
 

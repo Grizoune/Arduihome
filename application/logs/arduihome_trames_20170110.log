@@ -50,3 +50,16 @@ id_bouton=0
 etat=true
 }
 
+2017-01-10 13:49:27 : xpl-cmnd
+{
+hop=1
+source=xpl-ardui.server
+target=xpl-ardui.relais
+}
+homeeasy.basic
+{
+id_group=21876562
+id_bouton=0
+etat=true
+}
+
