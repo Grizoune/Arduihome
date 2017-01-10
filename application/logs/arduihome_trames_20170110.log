@@ -1,0 +1,52 @@
+2017-01-10 10:19:01 :xpl-cmnd
+{
+hop=1
+source=xpl-ardui.server
+target=xpl-ardui.relais
+}
+homeeasy.basic
+{
+id_group=21876562
+id_bouton=0
+etat=true
+}
+
+2017-01-10 10:48:54 :xpl-cmnd
+{
+hop=1
+source=xpl-ardui.server
+target=xpl-ardui.relais
+}
+homeeasy.basic
+{
+id_group=21876562
+id_bouton=0
+etat=true
+}
+
+2017-01-10 10:53:20 :xpl-cmnd
+{
+hop=1
+source=xpl-ardui.server
+target=xpl-ardui.relais
+}
+homeeasy.basic
+{
+id_group=21876562
+id_bouton=0
+etat=true
+}
+
+2017-01-10 10:53:38 :xpl-cmnd
+{
+hop=1
+source=xpl-ardui.server
+target=xpl-ardui.relais
+}
+homeeasy.basic
+{
+id_group=21876562
+id_bouton=0
+etat=true
+}
+

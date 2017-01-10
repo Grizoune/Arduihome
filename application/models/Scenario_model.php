@@ -50,7 +50,6 @@ class Scenario_model extends CI_Model{
 	public function execute($_id_scenario){
 			$scenar = $this->find($_id_scenario);
 			eval($scenar->code);
-			//eval(base64_decode($scenar->code));
 	}
 
 	private function sendCommande($_id_commande){
@@ -63,11 +62,12 @@ class Scenario_model extends CI_Model{
 	}
 
 	public function executeCommandes(){
+		$this->load->library('Arduino_log');
 		foreach($this->peripherique_model->findAll() as $peripherique){
 
 			if($this->peripheriques_valeurs[$peripherique->id] != $this->new_peripheriques_valeurs[$peripherique->id]){
 				$this->commande_model->sendCommandeByPerifAndValeur($peripherique->id, $this->new_peripheriques_valeurs[$peripherique->id]);
-				echo "send modification valeur perif : ".$peripherique->id.", nouvelle valeur : ".$this->new_peripheriques_valeurs[$peripherique->id]."\n";
+				$this->Arduino_log->write('infos',"send modification valeur perif : ".$peripherique->id.", nouvelle valeur : ".$this->new_peripheriques_valeurs[$peripherique->id]);
 			}
 		}
 	}

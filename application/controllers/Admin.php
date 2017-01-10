@@ -69,4 +69,10 @@ class Admin extends CI_Controller{
 			$this->load->view('admin', $output);
 			$this->load->view('footer');
 	}
+
+	public function log($type){
+			$this->load->view('header');
+			$this->load->view('log', array('type'=>$type));
+			$this->load->view('footer');
+	}
 }

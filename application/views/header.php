@@ -69,6 +69,15 @@
             <a class="dropdown-item" href="<?php echo site_url('admin/scheduler'); ?>">Actions planifiées</a>
           </div>
         </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Logs</a>
+          <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+            <a class="dropdown-item" href="<?php echo site_url('admin/log/infos'); ?>">infos</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/log/errors'); ?>">Errors</a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/log/trames'); ?>">Trames</a>
+          </div>
+        </li>
       </ul>
     </nav>
 
