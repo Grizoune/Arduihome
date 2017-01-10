@@ -3,7 +3,7 @@
 class Arduihome_demon
 {
 
-		private $db;
+		private $CI;
 		private $log;
 
 		public function __construct(){
@@ -11,10 +11,11 @@ class Arduihome_demon
 		}
 
 		public function build_demon(){
-			$this->db =& get_instance();
-			require('Arduihome_log.php');
-			$this->log = new Arduihome_log();
-			$this->log->write("infos", "Lancement du serveur");
+			$this->CI =& get_instance();
+
+			$this->CI->load->library('Arduihome_log');
+			$this->log = $this->CI->arduihome_log;
+		    $this->log->write("infos", "Lancement du serveur");
 			
 			ini_set ('max_execution_time', 1200);
 			$start_time = time();
@@ -56,15 +57,15 @@ class Arduihome_demon
 
 						//recherche du peripherique
 						if(isset($message->peripherique)){
-							$peripherique = $this->peripherique_model->find($message->peripherique);
+							$peripherique = $this->CI->peripherique_model->find($message->peripherique);
 							if(isset($peripherique->id) && isset($message->valeur)){
 								//truc de ouf, on a trouvé un peripherique, on met à jour sa valeur
-								$this->peripherique_model->updateValeurPeripherique($peripherique->id, $message->valeur);
-								$this->log->write("infos", "mise à jour de la valeur de '".$peripherique->nom."', nouvelle valeur : ".$message->valeur);
-								$this->load->model('scenario_model');
+								$this->CI->peripherique_model->updateValeurPeripherique($peripherique->id, $message->valeur);
+								//$this->log->write("infos", "mise à jour de la valeur de '".$peripherique->nom."', nouvelle valeur : ".$message->valeur);
+								$this->CI->load->model('scenario_model');
 
 								//on relance tous les scenarios*
-								$this->scenario_model->executeAll();
+								$this->CI->scenario_model->executeAll();
 							}
 						}
 					}catch(Exception $e){

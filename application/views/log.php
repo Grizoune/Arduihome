@@ -1,4 +1,4 @@
-<div id="zone-log"></code>
+<div id="zone-log"></div>
 
 
 <script>
@@ -7,10 +7,11 @@ function load_log(){
 	$.ajax({
 	  url: site_url+"/ajax/log/<?php echo $type; ?>"
 	}).done(function( data ) {
-		$('#zone-log').html(data);
+		$('#zone-log').html("<div>"+data+"</div>");
 	});
 
-$('#zone-log').scrollTop($('#zone-log').height()+800);
+
+	$('#zone-log').scrollTop($('#zone-log div').height());
 
 }
 

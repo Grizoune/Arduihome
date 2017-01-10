@@ -62,12 +62,12 @@ class Scenario_model extends CI_Model{
 	}
 
 	public function executeCommandes(){
-		$this->load->library('Arduino_log');
+		//$this->load->library('Arduino_log');
 		foreach($this->peripherique_model->findAll() as $peripherique){
 
 			if($this->peripheriques_valeurs[$peripherique->id] != $this->new_peripheriques_valeurs[$peripherique->id]){
 				$this->commande_model->sendCommandeByPerifAndValeur($peripherique->id, $this->new_peripheriques_valeurs[$peripherique->id]);
-				$this->Arduino_log->write('infos',"Modification automatique de : ".$peripherique->nom.", nouvelle valeur : ".$this->new_peripheriques_valeurs[$peripherique->id]);
+				//$this->Arduino_log->write('infos',"Modification automatique de : ".$peripherique->nom.", nouvelle valeur : ".$this->new_peripheriques_valeurs[$peripherique->id]);
 			}
 		}
 	}
