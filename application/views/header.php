@@ -78,9 +78,12 @@
         </li>
       </ul>
 
-      <a href="#" onclick="restartServeur();" class="btn" id="demon-statut">
-          Demond status
-      </a>
+      <div id="zone-helpers">
+        <a href="#" onclick="restartServeur();" class="btn" id="demon-statut">
+            Demond status
+        </a>
+        <a href="<?php echo site_url('front/deconnexion'); ?>"><img src="<?php echo base_url()."assets/img/power.png"; ?>" /></a>
+      </div>
     </nav>
 
     <div class="container-fluid">

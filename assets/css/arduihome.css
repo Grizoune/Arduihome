@@ -9,7 +9,7 @@ body {
 }
 
 .navbar-dark li a{ 
-	font-size: 16pt;
+	font-size: 12pt;
 	padding: 5px;
 	margin: 5px;
 }
@@ -86,8 +86,11 @@ body {
 }
 
 #demon-statut{
+
+}
+
+#zone-helpers{
 	position: absolute;
 	right: 10px;
 	top: 10px;
 }
-

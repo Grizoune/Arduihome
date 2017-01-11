@@ -17,4 +17,9 @@ class Front extends CI_Controller {
 
 		$this->load->view('identification');
 	}
+
+	public function deconnexion(){
+		$this->session->set_userdata('is_ident', false);
+		redirect('dashboard/index');
+	}
 }
