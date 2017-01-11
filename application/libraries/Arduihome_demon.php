@@ -17,7 +17,7 @@ class Arduihome_demon
 			$this->log = $this->CI->arduihome_log;
 		    $this->log->write("infos", "Lancement du serveur");
 			
-			ini_set ('max_execution_time', 1200);
+			ini_set ('max_execution_time', 0);
 			$start_time = time();
 
 			//$serveur = new Serveur_XPL();
