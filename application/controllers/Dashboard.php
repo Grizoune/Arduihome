@@ -37,4 +37,7 @@ class Dashboard extends CI_Controller {
 	}
 
 
+	public function identification(){
+		$this->load->view('identification');
+	}
 }
