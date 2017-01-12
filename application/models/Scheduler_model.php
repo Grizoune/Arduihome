@@ -13,6 +13,8 @@ class Scheduler_model extends CI_Model{
 
 
 		foreach($planifications as $key=>$planification){
+
+
 			$now = new DateTime();
 			$next = new DateTime();
 			$next->add(new DateInterval('P'.$planification->interval));
@@ -34,6 +36,10 @@ class Scheduler_model extends CI_Model{
 			foreach($commandes as $commande){
 				$this->commande_model->sendCommande($commande->id_commande);
 			}
+
+
+			$this->load->library('Arduihome_log');
+			$this->arduihome_log->write('infos', 'Action plannifiée : '.$planification->nom);
 		}
 	}
 
