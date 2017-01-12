@@ -32,6 +32,8 @@ class Ajax extends CI_Controller {
 
 	public function startServeur(){
 		$this->load->library('Arduihome_demon');
+		$this->load->library('Arduihome_log');
+		$this->arduino_log->write("infos", "redemarrage manuel du serveur");
 		if($this->arduihome_demon->getStatut() ==0)
 				$this->arduihome_demon->startProcess();
 	}
