@@ -10,7 +10,7 @@
 					  <div class="card-block">
 					    <h4 class="card-title"><?php echo $periph->nom; ?></h4>
 					  	<?php foreach($periph->commandes as $commande){ ?>
-					    <a href="#" onclick="sendCommande(<?php echo $commande->id; ?>); return false;" class="card-link btn btn-primary"><?php echo $commande->nom; ?></a>
+					    <a href="#" onclick="sendCommande(<?php echo $commande->id; ?>); return false;" class="card-link btn btn-primary bouton bouton-<?php echo $periph->id."-".$commande->nouvelle_valeur; ?>" ><?php echo $commande->nom; ?></a>
 					    <?php } ?>
 					  </div>
 					</div>

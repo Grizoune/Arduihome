@@ -27,7 +27,18 @@ class Ajax extends CI_Controller {
 		header("Access-Control-Allow-Origin: *");              // Tous les domaines
 
 		$this->load->library('Arduihome_demon');
-		echo $this->arduihome_demon->getStatut();
+
+		$data_peripheriques = $this->db
+			->select('id, valeur')
+			->get('peripherique')
+			->result_array();
+
+		$data = array(
+			'demon_status' => (int)$this->arduihome_demon->getStatut(),
+			'peripheriques_status' => $data_peripheriques
+			);
+		header('content-type: application/json');
+		echo json_encode($data);
 	}
 
 	public function startServeur(){
