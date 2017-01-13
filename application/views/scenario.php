@@ -43,7 +43,7 @@
 		$.ajax({
 		  type: "POST",
 		  url: "<?php echo site_url('ajax/save_scenario/'.$scenario->id); ?>",
-		  data: 'xml='+xml_text+'&code='+code,
+		  data: 'xml='+encodeURIComponent(xml_text)+'&code='+encodeURIComponent(code),
 		  dataType: "text"
 		}).done(function() {
 		  alert( "Sauvegarde reussie !" );

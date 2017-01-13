@@ -27,10 +27,14 @@ class Scenario_model extends CI_Model{
 	}
 
 	public function save($_id, $datas){
+
+		print_r($datas);
 		foreach($datas as $key=>$data)
 				$datas[$key] = $data;
+
 		$this->db->where('id', $_id);
 		$this->db->update('scenario', $datas); 
+
 	}
 
 
