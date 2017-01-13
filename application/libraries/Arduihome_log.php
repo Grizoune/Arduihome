@@ -16,7 +16,7 @@
 					//try {
 						$file = fopen($this->path.$type."_".date('Ymd').".log", 'a+');
 						fwrite($file, date("Y-m-d H:i:s")." : ".$message."\n");
-						fclode($file);
+						fclose($file);
 					/*}catch(Exception $e){
 							$this->write('errors', 'Exception reçue lors de la mise en log : '.$e->getMessage());
 					}*/

@@ -34,7 +34,7 @@ class Scheduler_model extends CI_Model{
 							->result();
 
 			foreach($commandes as $commande){
-				$this->commande_model->sendCommande($commande->id_commande);
+				$this->commande_model->sendCommandeByIdCommande($commande->id_commande);
 			}
 
 
