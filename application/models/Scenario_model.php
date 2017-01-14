@@ -21,6 +21,7 @@ class Scenario_model extends CI_Model{
 
 	public function findAllActifs(){
 		return $this->db
+			->where('active', 1)
 			->order_by('priorite DESC')
 			->get('scenario')
 			->result();
