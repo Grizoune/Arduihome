@@ -14,6 +14,6 @@ Blockly.Blocks['heure_domo'] = {
 };
 
 Blockly.PHP['heure_domo'] = function(block) {
-  return ['date(\'g\')', Blockly.PHP.ORDER_MEMBER];
+  return ['date(\'G\')', Blockly.PHP.ORDER_MEMBER];
 };
 
