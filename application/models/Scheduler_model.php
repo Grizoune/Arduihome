@@ -6,7 +6,7 @@ class Scheduler_model extends CI_Model{
 	public function execExpiredTask(){
 
 		$planifications = $this->db
-							->where('next_exec <= NOW()')
+							->where('next_exec <= "'.date('Y-m-d H:i:s').'"')
 							->where('active', 1)
 							->get('planification')
 							->result();

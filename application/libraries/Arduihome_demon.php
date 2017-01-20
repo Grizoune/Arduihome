@@ -123,7 +123,7 @@ class Arduihome_demon
 
 		public function startProcess(){
 			set_time_limit(3);
-			exec("php ".FCPATH."/index.php serveur start >> /dev/null &");
+			exec("php ".FCPATH."index.php serveur start >> /dev/null &");
 			echo "serveur started !";
 		}
 }
