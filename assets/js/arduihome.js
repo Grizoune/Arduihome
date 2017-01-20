@@ -38,3 +38,10 @@ function actualise_demon_status(){
 		}	
 	});
 }
+
+function ajoutFavoris(id_peripherique){
+		$.ajax(site_url+"/ajax/favoris/"+id_peripherique)
+  	.done(function() {
+  	  window.location.reload();
+ 	 });
+}

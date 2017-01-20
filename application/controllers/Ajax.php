@@ -49,4 +49,15 @@ class Ajax extends CI_Controller {
 				$this->arduihome_demon->startProcess();
 	}
 
+	public function favoris($id_perif){
+		$perif = $this->peripherique_model->find($id_perif);
+
+		if($perif->favoris == 0)
+			$this->peripherique_model->updateFavorisPeripherique($id_perif, 1);
+		else
+			$this->peripherique_model->updateFavorisPeripherique($id_perif, 0);
+
+
+	}
+
 }

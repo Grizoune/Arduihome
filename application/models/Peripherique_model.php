@@ -37,4 +37,11 @@ class Peripherique_model extends CI_Model{
 				->where('id', $_id_peripherique)
 				->update('peripherique');
 	}
+
+	public function updateFavorisPeripherique($_id_peripherique, $valeur){
+		$this->db
+				->set('favoris', $valeur)
+				->where('id', $_id_peripherique)
+				->update('peripherique');
+	}
 }
