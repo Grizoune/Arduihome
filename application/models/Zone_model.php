@@ -3,7 +3,7 @@
 class Zone_model extends CI_Model{
 
 	public function  getZones(){
-			$zones = $this->db->get('zone')->result();
+			$zones = $this->db->order_by('ordre')->get('zone')->result();
 			return $zones;
 
 	}
