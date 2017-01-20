@@ -34,6 +34,7 @@ class Peripherique_model extends CI_Model{
 	public function updateValeurPeripherique($_id_peripherique, $valeur){
 		$this->db
 				->set('valeur', $valeur)
+				->set('last_heartbeat', date('Y-m-d H:i:s'))
 				->where('id', $_id_peripherique)
 				->update('peripherique');
 	}

@@ -15,7 +15,6 @@ class Arduihome_demon
 
 			$this->CI->load->library('Arduihome_log');
 			$this->log = $this->CI->arduihome_log;
-		    $this->log->write("infos", "Lancement du serveur");
 			
 			//ini_set ('max_execution_time', 0);
 			$start_time = time();

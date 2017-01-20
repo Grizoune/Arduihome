@@ -16,6 +16,9 @@
 						<img src="<?php echo base_url(); ?>assets/img/icons/etoile_vide.svg" style="height: 20px;width: 20px;" /></a>
 					    <?php } ?>
 					    </h4>
+
+					    <?php if(!empty($periph->widget))include('widget/'.$periph->widget.".php"); ?>
+
 					  	<?php foreach($periph->commandes as $commande){ ?>
 					    <a href="#" onclick="sendCommande(<?php echo $commande->id; ?>); return false;" class="card-link btn bouton bouton-<?php echo $periph->id."-".$commande->nouvelle_valeur; ?>" ><?php echo $commande->nom; ?></a>
 					    <?php } ?>
