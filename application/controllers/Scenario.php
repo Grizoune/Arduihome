@@ -8,7 +8,7 @@ class Scenario extends CI_Controller {
 			$this->load->view('header');
 			$this->load->view('scenario', array(
 				'type' => 'scenario',
-				'scenario' => $this->scenario_model->find($_id),
+				'obj' => $this->scenario_model->find($_id),
 				'commandes' => $this->commande_model->findAll(),
 				'peripheriques' => $this->peripherique_model->findAll()
 				));
