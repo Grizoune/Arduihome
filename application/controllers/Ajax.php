@@ -49,10 +49,18 @@ class Ajax extends CI_Controller {
 			->get('peripherique')
 			->result_array();
 
+		$data_modes = $this->db
+			->select('id, active')
+			->get('mode')
+			->result_array();
+
 		$data = array(
 			'demon_status' => (int)$this->arduihome_demon->getStatut(),
-			'peripheriques_status' => $data_peripheriques
+			'peripheriques_status' => $data_peripheriques,
+			'modes_status' => $data_modes
 			);
+
+
 		header('content-type: application/json');
 		echo json_encode($data);
 	}

@@ -37,4 +37,9 @@ class Mode_model extends Scenario_model{
 		eval($mode->desactive_code);
 	}
 
+	public function sendCommande($_id_commande){
+		$this->commande_model->sendCommande($this->commande_model->find($_id_commande));
+		time_nanosleep(0,300000000);
+	}
+
 }

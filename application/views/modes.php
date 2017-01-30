@@ -9,7 +9,7 @@
 					  <div class="card-block">
 					    <h4 class="card-title"><?php echo $mode->nom; ?> </h4>
 							
-					    <a href="#" onclick="activeMode(<?php echo $mode->id; ?>); return false;" class="card-link btn bouton mode-<?php echo $mode->id; ?>" >Activer</a>
+					    <a href="#" onclick="activeMode(<?php echo $mode->id; ?>); return false;" class="card-link btn mode mode-<?php echo $mode->id; ?>" >Activer</a>
 					    
 					  </div>
 					</div>

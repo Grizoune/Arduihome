@@ -14,7 +14,7 @@ class Serveur extends CI_Controller{
 		
 		if($this->arduihome_demon->getStatut() ==0){
 				$this->arduihome_demon->startProcess();				
-				$this->arduihome_log->write("infos", "redemarrage automatique du serveur via la tache cron");
+				//$this->arduihome_log->write("infos", "redemarrage automatique du serveur via la tache cron");
 		}
 
 	}

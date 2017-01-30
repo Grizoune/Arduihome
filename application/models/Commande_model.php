@@ -50,7 +50,7 @@ class Commande_model extends CI_Model{
 		$this->sendCommande($obj);
 	}
 
-	private function sendCommande($commande){
+	public function sendCommande($commande){
 		$this->load->model('xpl_message'); 
 		$this->xpl_message->init('xpl-cmnd', $commande->target, $commande->type_message, $commande->contenu);
 		$this->xpl_message->send();

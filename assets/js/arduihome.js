@@ -33,8 +33,20 @@ function actualise_demon_status(){
 			$('#demon-statut').addClass("btn-outline-danger");	
 		}
 			$('.bouton').addClass("btn-primary");
+
 		for(i=0; i < data.peripheriques_status.length; i++){
 				$('.bouton-'+data.peripheriques_status[i].id+"-"+data.peripheriques_status[i].valeur).removeClass("btn-primary");
+		}	
+
+		for(j=0; j < data.modes_status.length; j++){
+				if(data.modes_status[j].active == "1"){
+					$('.mode-'+data.modes_status[j].id).html("Desactiver");
+					$('.mode-'+data.modes_status[j].id).addClass("btn-danger");
+				}else{
+					$('.mode-'+data.modes_status[j].id).html("Activer");
+					$('.mode-'+data.modes_status[j].id).addClass("btn-success");
+				}
+
 		}	
 	});
 }
@@ -46,9 +58,23 @@ function ajoutFavoris(id_peripherique){
  	 });
 }
 
+function changeBtnMode(id_mode){
+	if($('.mode-'+id_mode).html() == "Activer"){
+			$('.mode-'+id_mode).removeClass("btn-success");
+			$('.mode-'+id_mode).addClass("btn-danger");
+			$('.mode-'+id_mode).html("Desactiver");
+	}else{
+			$('.mode-'+id_mode).removeClass("btn-danger");
+			$('.mode-'+id_mode).addClass("btn-success");
+			$('.mode-'+id_mode).html("Activer");
+	}
+}
+
 function activeMode(id_mode){
+	changeBtnMode(id_mode);
+
 	$.ajax(site_url+"/ajax/update_mode/"+id_mode)
   	.done(function() {
-  	 
+
  	 });
 }
