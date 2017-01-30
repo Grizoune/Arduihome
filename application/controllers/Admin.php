@@ -71,6 +71,25 @@ class Admin extends CI_Controller{
 			$this->load->view('footer');
 	}
 
+
+	public function mode(){
+			
+			$crud = new grocery_CRUD();
+			$crud->set_theme('datatables');
+			$crud->set_table('mode');
+			$crud->set_subject('mode');
+			$crud->columns('nom');
+			$crud->add_action('Scénario d\'activation', '', 'mode/edit_activation', 'ui-icon-script');
+			$crud->add_action('Scénario de désactivation', '', 'mode/edit_desactivation', 'ui-icon-script');
+			$crud->fields('nom');
+			$output = $crud->render();
+
+			$this->load->view('header', $output);
+			$this->load->view('admin', $output);
+			$this->load->view('footer');
+	}
+
+
 	public function log($type){
 			$this->load->view('header');
 			$this->load->view('log', array('type'=>$type));

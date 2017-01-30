@@ -132,4 +132,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('peripherique_model', 'commande_model', 'zone_model');
+$autoload['model'] = array('peripherique_model', 'commande_model', 'zone_model', 'mode_model');

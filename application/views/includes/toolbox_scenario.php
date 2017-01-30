@@ -296,7 +296,8 @@
 
     <category name="Domotique" colour="20">
       <block type="commande_domo"></block>
-       <block type="valeur_domo"></block>  
+      <block type="valeur_domo"></block>  
       <block type="heure_domo"></block>    
+      <block type="sleep"></block> 
     </category>
   </xml>
