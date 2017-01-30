@@ -29,7 +29,6 @@ class Scenario_model extends CI_Model{
 
 	public function save($_id, $datas){
 
-		print_r($datas);
 		foreach($datas as $key=>$data)
 				$datas[$key] = $data;
 
@@ -57,12 +56,12 @@ class Scenario_model extends CI_Model{
 			eval($scenar->code);
 	}
 
-	private function sendCommande($_id_commande){
+	public function sendCommande($_id_commande){
 		$commande = $this->commande_model->find($_id_commande);
 		$this->new_peripheriques_valeurs[$commande->id_peripherique] = $commande->nouvelle_valeur;
 	}
 
-	private function getValeur($_id_peripherique){
+	public function getValeur($_id_peripherique){
 		return $this->new_peripheriques_valeurs[$_id_peripherique];
 	}
 

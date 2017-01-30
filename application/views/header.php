@@ -56,7 +56,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo site_url('admin/mode'); ?>">Modes </a>
+          <a class="nav-link" href="<?php echo site_url('mode/index'); ?>">Modes </a>
         </li>
 
           <li class="nav-item dropdown">
@@ -66,6 +66,7 @@
             <a class="dropdown-item" href="<?php echo site_url('admin/action'); ?>">Actions</a>
             <a class="dropdown-item" href="<?php echo site_url('admin/scheduler'); ?>">Actions planifiées</a>
             <a class="dropdown-item" href="<?php echo site_url('admin/scenario'); ?>">Scénarios </a>
+            <a class="dropdown-item" href="<?php echo site_url('admin/mode'); ?>">Modes </a>
           </div>
         </li>
 

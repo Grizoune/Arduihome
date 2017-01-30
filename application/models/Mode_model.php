@@ -1,6 +1,8 @@
 <?php
 
-class Mode_model extends CI_Model{
+include "Scenario_model.php";
+
+class Mode_model extends Scenario_model{
 
 	public function find($_id){
 		return $this->db
@@ -9,14 +11,30 @@ class Mode_model extends CI_Model{
 			->row();
 	}
 
-	public function save($_id, $datas){
+	public function findAll(){
+		return $this->db
+			->get('mode')
+			->result();
+	}
 
+	public function save($_id, $datas){
 		foreach($datas as $key=>$data)
 				$datas[$key] = $data;
 
 		$this->db->where('id', $_id);
 		$this->db->update('mode', $datas); 
+	}
 
+	public function active($id_mode){
+		$mode = $this->find($id_mode);
+		$this->save($id_mode, array('active'=>1));
+		eval($mode->active_code);
+	}
+
+	public function desactive($id_mode){
+		$mode = $this->find($id_mode);
+		$this->save($id_mode, array('active'=>0));
+		eval($mode->desactive_code);
 	}
 
 }

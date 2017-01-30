@@ -7,6 +7,16 @@ class Ajax extends CI_Controller {
 			$this->commande_model->sendCommandeByIdCommande($_id_commande);
 	}
 
+	public function update_mode($mode_id){
+		$mode = $this->mode_model->find($mode_id);
+
+		if($mode->active)
+			$this->mode_model->desactive($mode_id);
+		else
+			$this->mode_model->active($mode_id);
+		
+	}
+
 
 	public function save_scenario($_id_scenario){
 		$this->load->model('scenario_model');

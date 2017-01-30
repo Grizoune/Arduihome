@@ -2,6 +2,15 @@
 
 class Mode extends CI_Controller{
 
+	public function index(){
+		$this->load->view('header');
+		$this->load->view('modes',array(
+			'modes' => $this->mode_model->findAll()
+
+		));
+		$this->load->view('footer');
+	}
+
 
 	public function edit_activation($id_mode){
 			$mode = $this->mode_model->find($id_mode);

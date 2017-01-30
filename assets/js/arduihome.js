@@ -40,8 +40,15 @@ function actualise_demon_status(){
 }
 
 function ajoutFavoris(id_peripherique){
-		$.ajax(site_url+"/ajax/favoris/"+id_peripherique)
+	$.ajax(site_url+"/ajax/favoris/"+id_peripherique)
   	.done(function() {
   	  window.location.reload();
+ 	 });
+}
+
+function activeMode(id_mode){
+	$.ajax(site_url+"/ajax/update_mode/"+id_mode)
+  	.done(function() {
+  	 
  	 });
 }
