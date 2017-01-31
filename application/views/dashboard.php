@@ -15,6 +15,7 @@
 					    <?php }else{ ?>
 						<img src="<?php echo base_url(); ?>assets/img/icons/etoile_vide.svg" style="height: 20px;width: 20px;" /></a>
 					    <?php } ?>
+					    <img src="<?php echo base_url(); ?>assets/img/icons/clef.svg" style="height: 20px;width: 20px;display:none;" class="verou-<?php echo $periph->id; ?>"/></a>
 					    </h4>
 
 					    <?php if(!empty($periph->widget))include('widget/'.$periph->widget.".php"); ?>

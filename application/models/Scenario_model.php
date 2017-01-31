@@ -73,7 +73,7 @@ class Scenario_model extends CI_Model{
 		//$this->load->library('Arduino_log');
 		foreach($this->peripherique_model->findAll() as $peripherique){
 
-			if($this->peripheriques_valeurs[$peripherique->id] != $this->new_peripheriques_valeurs[$peripherique->id]){
+			if($this->peripheriques_valeurs[$peripherique->id] != $this->new_peripheriques_valeurs[$peripherique->id] && !$peripherique->locked){
 				$this->commande_model->sendCommandeByPerifAndValeur($peripherique->id, $this->new_peripheriques_valeurs[$peripherique->id]);
 				time_nanosleep(0,300000000);
 				//$this->Arduino_log->write('infos',"Modification automatique de : ".$peripherique->nom.", nouvelle valeur : ".$this->new_peripheriques_valeurs[$peripherique->id]);

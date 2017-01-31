@@ -1,3 +1,5 @@
+ALTER TABLE `peripherique` ADD `locked` BOOLEAN NOT NULL DEFAULT FALSE AFTER `last_heartbeat`;
+
 -- phpMyAdmin SQL Dump
 -- version 4.6.4deb1
 -- https://www.phpmyadmin.net/

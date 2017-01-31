@@ -45,7 +45,7 @@ class Ajax extends CI_Controller {
 		$this->load->library('Arduihome_demon');
 
 		$data_peripheriques = $this->db
-			->select('id, valeur')
+			->select('id, valeur, locked')
 			->get('peripherique')
 			->result_array();
 

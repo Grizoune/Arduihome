@@ -45,4 +45,26 @@ class Peripherique_model extends CI_Model{
 				->where('id', $_id_peripherique)
 				->update('peripherique');
 	}
+
+	public function lock($_id_peripheriques){
+			$q = $this->db->set('locked', 1);
+
+			if(is_array($_id_peripheriques))
+				$q->where('id IN ('.implode(",", $_id_peripheriques).')');
+			else
+				$q->where('id', $_id_peripheriques);
+
+			$q->update('peripherique');
+	}
+
+	public function unlock($_id_peripheriques){
+			$q = $this->db->set('locked', 0);
+
+			if(is_array($_id_peripheriques))
+				$q->where('id IN ('.implode(",", $_id_peripheriques).')');
+			else
+				$q->where('id', $_id_peripheriques);
+
+			$q->update('peripherique');
+	}
 }

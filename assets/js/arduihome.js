@@ -36,6 +36,11 @@ function actualise_demon_status(){
 
 		for(i=0; i < data.peripheriques_status.length; i++){
 				$('.bouton-'+data.peripheriques_status[i].id+"-"+data.peripheriques_status[i].valeur).removeClass("btn-primary");
+
+				if(data.peripheriques_status[i].locked == "1")
+					$('.verou-'+data.peripheriques_status[i].id).show();
+				else
+					$('.verou-'+data.peripheriques_status[i].id).hide();
 		}	
 
 		for(j=0; j < data.modes_status.length; j++){
