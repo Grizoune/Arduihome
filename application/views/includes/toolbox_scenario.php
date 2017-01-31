@@ -299,5 +299,7 @@
       <block type="valeur_domo"></block>  
       <block type="heure_domo"></block>    
       <block type="sleep"></block> 
+      <block type="valeur_mode"></block> 
+
     </category>
   </xml>

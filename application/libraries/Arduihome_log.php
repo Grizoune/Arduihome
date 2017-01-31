@@ -5,7 +5,7 @@
 			private $types = array("infos", "errors", "trames");
 
 			public function __construct(){
-				$this->path  = FCPATH."application/logs/arduihome_";
+				$this->path  = FCPATH."application/logs/";
 					/*foreach($this->types as $type)
 						$this->write($type, "");*/
 

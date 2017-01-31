@@ -27,6 +27,7 @@
     include("includes/blocks/valeur.inc");
     include("includes/blocks/heure.inc");
     include("includes/blocks/sleep.inc");
+    include("includes/blocks/mode_valeur.inc");
   ?>
 
   var workspace = Blockly.inject('blocklyDiv',{toolbox: document.getElementById('toolbox')});

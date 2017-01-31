@@ -1,6 +1,6 @@
 
 var valeurJson = {
-  "message0": "Valeur: %1",
+  "message0": "Valeur du peripherique %1",
   "output": "Number",
   "colour": 85,
   "args0": [

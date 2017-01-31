@@ -65,6 +65,10 @@ class Scenario_model extends CI_Model{
 		return $this->new_peripheriques_valeurs[$_id_peripherique];
 	}
 
+	public function getValeurMode($_id_mode){
+		return $this->mode_model->find($_id_mode)->valeur;
+	}
+
 	public function executeCommandes(){
 		//$this->load->library('Arduino_log');
 		foreach($this->peripherique_model->findAll() as $peripherique){
