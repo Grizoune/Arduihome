@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
@@ -34,61 +33,62 @@
              }
         } 
 ?>
-
-
     <script>
         var site_url = "<?php echo site_url(); ?>";
     </script>
-
-
   </head>
 
   <body>
+     <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse navbar-dark">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="<?php echo site_url(); ?>"><img src="<?php echo base_url(); ?>/assets/img/arduihome.gif" /></a>
 
-    <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="nav navbar-nav mr-auto">
 
-      <a class="navbar-brand" href="<?php echo site_url(); ?>"><img src="<?php echo base_url(); ?>/assets/img/arduihome.gif" /></a>
+            <li class="nav-item active">
+              <a class="nav-link" href="<?php echo site_url('dashboard/index'); ?>">Dashboard <span class="sr-only">(current)</span></a>
+            </li>
 
-      <ul class="nav navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo site_url('mode/index'); ?>">Modes </a>
+            </li>
 
-        <li class="nav-item active">
-          <a class="nav-link" href="<?php echo site_url('dashboard/index'); ?>">Dashboard <span class="sr-only">(current)</span></a>
-        </li>
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gestion</a>
+              <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+                <a class="dropdown-item" href="<?php echo site_url('admin/peripherique'); ?>">Peripheriques</a>
+                <a class="dropdown-item" href="<?php echo site_url('admin/action'); ?>">Actions</a>
+                <a class="dropdown-item" href="<?php echo site_url('admin/scheduler'); ?>">Actions planifiées</a>
+                <a class="dropdown-item" href="<?php echo site_url('admin/scenario'); ?>">Scénarios </a>
+                <a class="dropdown-item" href="<?php echo site_url('admin/mode'); ?>">Modes </a>
+              </div>
+            </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo site_url('mode/index'); ?>">Modes </a>
-        </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Logs</a>
+              <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+                <a class="dropdown-item" href="<?php echo site_url('admin/log/infos'); ?>">infos</a>
+                <a class="dropdown-item" href="<?php echo site_url('admin/log/errors'); ?>">Errors</a>
+                <a class="dropdown-item" href="<?php echo site_url('admin/log/trames'); ?>">Trames</a>
+              </div>
+            </li>
+          </ul>
 
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gestion</a>
-          <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
-            <a class="dropdown-item" href="<?php echo site_url('admin/peripherique'); ?>">Peripheriques</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/action'); ?>">Actions</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/scheduler'); ?>">Actions planifiées</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/scenario'); ?>">Scénarios </a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/mode'); ?>">Modes </a>
+            <div class="my-2 my-lg-0">
+            <a href="#" onclick="restartServeur();" class="btn" id="demon-statut">
+                Demond status
+            </a>
+            <a href="<?php echo site_url('front/deconnexion'); ?>"><img src="<?php echo base_url()."assets/img/power.png"; ?>" /></a>
+            </div>
           </div>
-        </li>
+        </nav>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Logs</a>
-          <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
-            <a class="dropdown-item" href="<?php echo site_url('admin/log/infos'); ?>">infos</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/log/errors'); ?>">Errors</a>
-            <a class="dropdown-item" href="<?php echo site_url('admin/log/trames'); ?>">Trames</a>
-          </div>
-        </li>
-      </ul>
+        <div class="container-fluid">
 
-      <div id="zone-helpers">
-        <a href="#" onclick="restartServeur();" class="btn" id="demon-statut">
-            Demond status
-        </a>
-        <a href="<?php echo site_url('front/deconnexion'); ?>"><img src="<?php echo base_url()."assets/img/power.png"; ?>" /></a>
-      </div>
-    </nav>
-
-    <div class="container-fluid">
+          <div class="row">
     
 
 
