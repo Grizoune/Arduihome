@@ -56,32 +56,37 @@
               <a class="nav-link" href="<?php echo site_url('mode/index'); ?>">Modes </a>
             </li>
 
-              <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gestion</a>
-              <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
-                <a class="dropdown-item" href="<?php echo site_url('admin/peripherique'); ?>">Peripheriques</a>
-                <a class="dropdown-item" href="<?php echo site_url('admin/action'); ?>">Actions</a>
-                <a class="dropdown-item" href="<?php echo site_url('admin/scheduler'); ?>">Actions planifiées</a>
-                <a class="dropdown-item" href="<?php echo site_url('admin/scenario'); ?>">Scénarios </a>
-                <a class="dropdown-item" href="<?php echo site_url('admin/mode'); ?>">Modes </a>
-              </div>
-            </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Logs</a>
-              <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
-                <a class="dropdown-item" href="<?php echo site_url('admin/log/infos'); ?>">infos</a>
-                <a class="dropdown-item" href="<?php echo site_url('admin/log/errors'); ?>">Errors</a>
-                <a class="dropdown-item" href="<?php echo site_url('admin/log/trames'); ?>">Trames</a>
-              </div>
-            </li>
           </ul>
 
-            <div class="my-2 my-lg-0">
-            <a href="#" onclick="restartServeur();" class="btn" id="demon-statut">
-                Demond status
-            </a>
-            <a href="<?php echo site_url('front/deconnexion'); ?>"><img src="<?php echo base_url()."assets/img/power.png"; ?>" /></a>
+            <div class="my-3 my-lg-0">
+
+              <ul class="collapse navbar-collapse mini-menu">
+                <li>
+                <a href="#" onclick="restartServeur();" class="btn" id="demon-statut">Demond status</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?php echo base_url()."assets/img/engrenage.png"; ?>" /></a>
+                  <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+                    <a class="dropdown-item" href="<?php echo site_url('admin/peripherique'); ?>">Peripheriques</a>
+                    <a class="dropdown-item" href="<?php echo site_url('admin/action'); ?>">Actions</a>
+                    <a class="dropdown-item" href="<?php echo site_url('admin/scheduler'); ?>">Actions planifiées</a>
+                    <a class="dropdown-item" href="<?php echo site_url('admin/scenario'); ?>">Scénarios </a>
+                    <a class="dropdown-item" href="<?php echo site_url('admin/mode'); ?>">Modes </a>
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?php echo base_url()."assets/img/info.png"; ?>" /></a>
+                  <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+                    <a class="dropdown-item" href="<?php echo site_url('admin/log/infos'); ?>">infos</a>
+                    <a class="dropdown-item" href="<?php echo site_url('admin/log/errors'); ?>">Errors</a>
+                    <a class="dropdown-item" href="<?php echo site_url('admin/log/trames'); ?>">Trames</a>
+                  </div>
+                </li>
+
+                <li class="nav-item"><a href="<?php echo site_url('front/deconnexion'); ?>"><img src="<?php echo base_url()."assets/img/power.png"; ?>" /></a></li>
+              </ul>
             </div>
           </div>
         </nav>

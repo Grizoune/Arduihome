@@ -7,6 +7,11 @@ body {
 	padding: 0px;
 }
 
+.navbar-dark ul{
+	margin-left: 30px;
+}
+
+
 .navbar-dark li{
 	padding-right: 10px;
 }
@@ -20,6 +25,15 @@ body {
 	padding: 0px;
 
 }
+
+.mini-menu{
+	list-style-type: none;
+}
+
+.mini-menu a{
+	padding: 0px;
+}
+
 .sidebar li{
 	background-color: #F9F9F9;
 	border: 1px solid #acacac;
@@ -31,9 +45,8 @@ body {
 }
 
 .sidebar li a{
-
 	box-shadow: 0 1px 1px #FFFFFF inset;
-	color: #777777;
+	color: #000000;
 	display: block;
 	font-size: 13px;
 	padding: 10px 20px;
@@ -59,7 +72,6 @@ body {
 .sidebar .active a, li a:hover{
 	background: -moz-linear-gradient(center top , #1AAEF3, #0993D3) repeat scroll 0 0 rgba(0, 0, 0, 0);
 	box-shadow: none;
-	color: #FFFFFF;
 	font-weight: bold;
 }
 
@@ -89,7 +101,7 @@ body {
 }
 
 #demon-statut{
-
+	padding: 5px;
 }
 
 #zone-helpers{
