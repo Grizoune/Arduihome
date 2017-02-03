@@ -9,11 +9,14 @@ body {
 
 .navbar-dark ul{
 	margin-left: 30px;
+	margin-bottom:0px;
 }
 
 
 .navbar-dark li{
 	padding-right: 10px;
+	line-height: 40px;
+	vertical-align: middle;
 }
 
 
