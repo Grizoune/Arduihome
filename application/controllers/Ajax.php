@@ -57,7 +57,8 @@ class Ajax extends CI_Controller {
 		$data = array(
 			'demon_status' => (int)$this->arduihome_demon->getStatut(),
 			'peripheriques_status' => $data_peripheriques,
-			'modes_status' => $data_modes
+			'modes_status' => $data_modes,
+			'timeserver' => date("H")."h".date('i')
 			);
 
 

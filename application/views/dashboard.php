@@ -3,6 +3,12 @@
 		 <div class="col-md-10 zone-principale">
 	        <h1><img src="<?php echo base_url().'assets/img/icons/'.$zone->image; ?>.svg" style="height: 50px; width: 50px;"/> <?php echo $zone->zone; ?></h1>
 	        <div class="row">
+
+	        <!--<video width="400" height="222" src="rtsp://admin@192.168.1.33:554">
+				  Ici l'alternative à la vidéo : un lien de téléchargement, un message, etc.
+				</video>-->
+
+
 		        <?php foreach($peripheriques as $periph){ ?>
 		     	 <div class="col-md-3">
 

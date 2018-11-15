@@ -24,7 +24,7 @@ function actualise_demon_status(){
 	  url: site_url+"/ajax/demondStatus"
 	}).done(function( data ) {
 		if(data.demon_status == "1"){
-			$('#demon-statut').html("Serveur ok");
+			$('#demon-statut').html("Serveur ok - "+data.timeserver);
 			$('#demon-statut').removeClass("btn-outline-danger");
 			$('#demon-statut').addClass("btn-outline-success");
 		}else{

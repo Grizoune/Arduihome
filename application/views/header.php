@@ -47,16 +47,12 @@
 
           <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="nav navbar-nav mr-auto">
-
             <li class="nav-item active">
               <a class="nav-link" href="<?php echo site_url('dashboard/index'); ?>">Dashboard <span class="sr-only">(current)</span></a>
             </li>
-
             <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('mode/index'); ?>">Modes </a>
             </li>
-
-
           </ul>
 
             <div class="my-3 my-lg-0">
@@ -66,10 +62,9 @@
                 <a href="#" onclick="restartServeur();" class="btn" id="demon-statut">Demond status</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?php echo base_url()."assets/img/engrenage.png"; ?>" /></a>
+                  <a class="nav-link dropdown-toggle" href="#" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?php echo base_url()."assets/img/engrenage.png"; ?>" /></a>
                   <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
                     <a class="dropdown-item" href="<?php echo site_url('admin/peripherique'); ?>">Peripheriques</a>
-                    <a class="dropdown-item" href="<?php echo site_url('admin/action'); ?>">Actions</a>
                     <a class="dropdown-item" href="<?php echo site_url('admin/scheduler'); ?>">Actions planifiées</a>
                     <a class="dropdown-item" href="<?php echo site_url('admin/scenario'); ?>">Scénarios </a>
                     <a class="dropdown-item" href="<?php echo site_url('admin/mode'); ?>">Modes </a>
@@ -77,7 +72,7 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?php echo base_url()."assets/img/info.png"; ?>" /></a>
+                  <a class="nav-link dropdown-toggle" href="#" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?php echo base_url()."assets/img/info.png"; ?>" /></a>
                   <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
                     <a class="dropdown-item" href="<?php echo site_url('admin/log/infos'); ?>">infos</a>
                     <a class="dropdown-item" href="<?php echo site_url('admin/log/errors'); ?>">Errors</a>

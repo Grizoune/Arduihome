@@ -2,7 +2,11 @@
 
 class Admin extends CI_Controller{
 
+	public static $title = "Gestion ";
+
 	public function peripherique(){
+			Admin::$title .= "des péripheriques";
+
 			$crud = new grocery_CRUD();
 			$crud->set_theme('datatables');
 			$crud->set_table('peripherique');
@@ -18,6 +22,8 @@ class Admin extends CI_Controller{
 	}
 
 	public function scheduler(){
+			Admin::$title .= "des taches planifiées";
+
 			$crud = new grocery_CRUD();
 			$crud->set_theme('datatables');
 			$crud->set_model('Commande_crud_model');
@@ -56,6 +62,7 @@ class Admin extends CI_Controller{
 	}
 
 	public function scenario(){
+			Admin::$title .= "des scénarios";
 			
 			$crud = new grocery_CRUD();
 			$crud->set_theme('datatables');
@@ -73,7 +80,8 @@ class Admin extends CI_Controller{
 
 
 	public function mode(){
-			
+			Admin::$title .= "des modes";
+
 			$crud = new grocery_CRUD();
 			$crud->set_theme('datatables');
 			$crud->set_table('mode');
@@ -91,6 +99,8 @@ class Admin extends CI_Controller{
 
 
 	public function log($type){
+			Admin::$title .= "des logs";
+
 			$this->load->view('header');
 			$this->load->view('log', array('type'=>$type));
 			$this->load->view('footer');

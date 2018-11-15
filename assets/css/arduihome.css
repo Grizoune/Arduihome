@@ -24,6 +24,10 @@ body {
 	padding: 0px;
 }
 
+.grocerycrud-container{
+	padding: 20px;
+}
+
 .sidebar{
 	padding: 0px;
 
@@ -84,10 +88,6 @@ body {
 
 .zone-principale{
 	padding: 20px;
-}
-
-.groceryCrudTable{
-	margin-top : 50px!important;
 }
 
 #crudForm input {
