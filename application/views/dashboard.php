@@ -14,7 +14,7 @@
 
 					<div class="card">
 					  <div class="card-block">
-					    <h4 class="card-title"><?php echo $periph->nom; ?> 
+					    <h4 class="card-title"><?php echo $periph->nom."(".sizeof($periph->defauts).")"; ?> 
 					    <a href="#" onclick="ajoutFavoris(<?php echo $periph->id; ?> );">
 					    <?php if($periph->favoris){ ?>
 					    <img src="<?php echo base_url(); ?>assets/img/icons/etoile.svg" style="height: 20px;width: 20px;" /></a>
