@@ -14,14 +14,18 @@
 
 					<div class="card">
 					  <div class="card-block">
-					    <h4 class="card-title"><?php echo $periph->nom."(".sizeof($periph->defauts).")"; ?> 
+					    <h4 class="card-title"><?php echo $periph->nom; ?> 
 					    <a href="#" onclick="ajoutFavoris(<?php echo $periph->id; ?> );">
 					    <?php if($periph->favoris){ ?>
 					    <img src="<?php echo base_url(); ?>assets/img/icons/etoile.svg" style="height: 20px;width: 20px;" /></a>
 					    <?php }else{ ?>
 						<img src="<?php echo base_url(); ?>assets/img/icons/etoile_vide.svg" style="height: 20px;width: 20px;" /></a>
-					    <?php } ?>
-					    <img src="<?php echo base_url(); ?>assets/img/icons/clef.svg" style="height: 20px;width: 20px;display:none;" class="verou-<?php echo $periph->id; ?>"/></a>
+					    <?php } ?></a>
+					    <img src="<?php echo base_url(); ?>assets/img/icons/clef.svg" style="height: 20px;width: 20px;display:none;" class="verou-<?php echo $periph->id; ?>"/>
+						<img src="<?php echo base_url(); ?>assets/img/warning.png" style="<?php if(sizeof($periph->warns)==0)echo "display:none;"; ?>" class="warning-<?php echo $periph->id; ?>" data-toggle="modal" data-target="#exampleModalCenter" />
+						<img src="<?php echo base_url(); ?>assets/img/error.png" style="<?php if(sizeof($periph->errors)==0)echo "display:none;"; ?>" class="alert-<?php echo $periph->id; ?>" data-toggle="modal" data-target="#exampleModalCenter" />
+
+
 					    </h4>
 
 					    <?php if(!empty($periph->widget))include('widget/'.$periph->widget.".php"); ?>
@@ -36,3 +40,22 @@
 				<?php } ?>
 			</div>
 		</div>
+<script type="text/javascript">
+$('.modal').modal({});
+	</script>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      </div>
+    </div>
+  </div>
+</div>

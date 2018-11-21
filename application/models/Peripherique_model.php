@@ -22,7 +22,8 @@ class Peripherique_model extends CI_Model{
 					->row();
 
 		$obj->commandes = $this->db->where('id_peripherique', $obj->id)->get('commande')->result();
-		$obj->defauts = $this->getDefauts($_id);
+		$obj->warns = $this->getDefauts($_id);
+		$obj->errors = $this->getErrors($_id);
 		return $obj;
 	}
 
@@ -37,6 +38,19 @@ class Peripherique_model extends CI_Model{
 		$results = $this->db
 					->where('id_peripherique', $_id)
 					->where('lue', 0)
+					->where("type", "wrn")
+					->get('defaut')
+					->result();
+
+		return $results;
+	}
+
+	public function getErrors($_id){
+
+		$results = $this->db
+					->where('id_peripherique', $_id)
+					->where('lue', 0)
+					->where('type', "err")
 					->get('defaut')
 					->result();
 
