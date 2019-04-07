@@ -59,6 +59,8 @@ class Peripherique_model extends CI_Model{
 	}
 
 	public function updateValeurPeripherique($_id_peripherique, $valeur){
+		$this->config->load('arduihome');
+
 		$this->db
 				->set('valeur', $valeur)
 				->set('last_heartbeat', date('Y-m-d H:i:s'))
@@ -68,24 +70,27 @@ class Peripherique_model extends CI_Model{
 		$perif = $this->find($_id_peripherique);
 		if($perif->log_value == 1){
 
-			/*$data = "cpu_load_short,host=server01,region=us-west value=0.64 ".(int)microtime(true);
-			echo $data."\n";
+			
+		if($this->config->item('influx_url')){
+				$data = str_replace(" ","_", $perif->nom).",device=".$perif->target.",zone=".$perif->zone." value=".$valeur." ".((int)microtime(true)*1000000000);
+				echo $data."\n";
 
-			$tuCurl = curl_init();
-			curl_setopt($tuCurl, CURLOPT_URL, "http://192.168.1.13:8086/write?db=arduihome"); 
-			curl_setopt($tuCurl, CURLOPT_POST, 1);
-			curl_setopt($tuCurl, CURLOPT_POSTFIELDS, $data); 
+				$tuCurl = curl_init();
+				curl_setopt($tuCurl, CURLOPT_URL, $this->config->item('influx_url')); 
+				curl_setopt($tuCurl, CURLOPT_POST, 1);
+				curl_setopt($tuCurl, CURLOPT_POSTFIELDS, $data); 
 
-			$tuData = curl_exec($tuCurl); 
-			if(!curl_errno($tuCurl)){
-			  $info = curl_getinfo($tuCurl);
-			  echo 'Took ' . $info['total_time'] . ' seconds to send a request to ' . $info['url'];
-			} else {
-			  echo 'Curl error: ' . curl_error($tuCurl);
+				$tuData = curl_exec($tuCurl); 
+				if(!curl_errno($tuCurl)){
+				  $info = curl_getinfo($tuCurl);
+				  echo 'Took ' . $info['total_time'] . ' seconds to send a request to ' . $info['url'];
+				} else {
+				  echo 'Curl error: ' . curl_error($tuCurl);
+				}
+
+				curl_close($tuCurl);
+				echo $tuData."\n"; 
 			}
-
-			curl_close($tuCurl);
-			echo $tuData."\n"; */
 		}
 	}
 
