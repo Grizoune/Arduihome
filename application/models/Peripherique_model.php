@@ -73,7 +73,7 @@ class Peripherique_model extends CI_Model{
 			
 		if($this->config->item('influx_url')){
 		
-				$data = str_replace(" ","_", $perif->nom).",device=".$perif->target.",zone=".$perif->zone." value=".$valeur." ".((microtime(true)*10000)*100000);
+				$data = str_replace(" ","_", $perif->nom).",device=".$perif->target.",zone=".$perif->zone." value=".$valeur." ".(int)((microtime(true)*10000)*100000);
 				echo $data."\n";
 
 				$tuCurl = curl_init();
