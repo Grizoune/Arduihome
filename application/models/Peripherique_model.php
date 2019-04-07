@@ -20,10 +20,11 @@ class Peripherique_model extends CI_Model{
 					->join('zone z', 'z.id = p.id_zone')
 					->get('peripherique p')
 					->row();
-
-		$obj->commandes = $this->db->where('id_peripherique', $obj->id)->get('commande')->result();
-		$obj->warns = $this->getDefauts($_id);
-		$obj->errors = $this->getErrors($_id);
+		if(isset($obj)){
+			$obj->commandes = $this->db->where('id_peripherique', $obj->id)->get('commande')->result();
+			$obj->warns = $this->getDefauts($_id);
+			$obj->errors = $this->getErrors($_id);
+		}
 		return $obj;
 	}
 
@@ -63,6 +64,29 @@ class Peripherique_model extends CI_Model{
 				->set('last_heartbeat', date('Y-m-d H:i:s'))
 				->where('id', $_id_peripherique)
 				->update('peripherique');
+
+		$perif = $this->find($_id_peripherique);
+		if($perif->log_value == 1){
+
+			/*$data = "cpu_load_short,host=server01,region=us-west value=0.64 ".(int)microtime(true);
+			echo $data."\n";
+
+			$tuCurl = curl_init();
+			curl_setopt($tuCurl, CURLOPT_URL, "http://192.168.1.13:8086/write?db=arduihome"); 
+			curl_setopt($tuCurl, CURLOPT_POST, 1);
+			curl_setopt($tuCurl, CURLOPT_POSTFIELDS, $data); 
+
+			$tuData = curl_exec($tuCurl); 
+			if(!curl_errno($tuCurl)){
+			  $info = curl_getinfo($tuCurl);
+			  echo 'Took ' . $info['total_time'] . ' seconds to send a request to ' . $info['url'];
+			} else {
+			  echo 'Curl error: ' . curl_error($tuCurl);
+			}
+
+			curl_close($tuCurl);
+			echo $tuData."\n"; */
+		}
 	}
 
 	public function updateFavorisPeripherique($_id_peripherique, $valeur){

@@ -57,30 +57,30 @@ class Arduihome_demon
 						//recherche du peripherique
 						if(isset($message->peripherique)){
 
-							$peripherique = $this->CI->peripherique_model->find($message->peripherique);
+							if($peripherique = $this->CI->peripherique_model->find($message->peripherique)){
 
-							//si c'est une trame courte (type log), bas on log
-							if($message->longueur == 1){
+								//si c'est une trame courte (type log), bas on log
+								if($message->longueur == 1){
 
-								$this->CI->defaut_model->add($message);
-								
-							}elseif($message->longueur == 2 && isset($peripherique->id) && isset($message->valeur)){
-							//sinon on execute les scénarios
-								//truc de ouf, on a trouvé un peripherique, on met à jour sa valeur
-								$this->CI->peripherique_model->updateValeurPeripherique($peripherique->id, $message->valeur);
+									$this->CI->defaut_model->add($message);
+									
+								}elseif($message->longueur == 2 && isset($peripherique->id) && isset($message->valeur)){
+								//sinon on execute les scénarios
+									//truc de ouf, on a trouvé un peripherique, on met à jour sa valeur
+									$this->CI->peripherique_model->updateValeurPeripherique($peripherique->id, $message->valeur);
 
-								if(isset($message->commandes["lock"]) && $message->commandes["lock"] == "1")
-									$this->CI->peripherique_model->lock($peripherique->id);
-								if(isset($message->commandes["lock"]) && $message->commandes["lock"] == "0")
-									$this->CI->peripherique_model->unlock($peripherique->id);
-								//$this->log->write("infos", "mise à jour de la valeur de '".$peripherique->nom."', nouvelle valeur : ".$message->valeur);
-								$this->CI->load->model('scenario_model');
+									if(isset($message->commandes["lock"]) && $message->commandes["lock"] == "1")
+										$this->CI->peripherique_model->lock($peripherique->id);
+									if(isset($message->commandes["lock"]) && $message->commandes["lock"] == "0")
+										$this->CI->peripherique_model->unlock($peripherique->id);
+									//$this->log->write("infos", "mise à jour de la valeur de '".$peripherique->nom."', nouvelle valeur : ".$message->valeur);
+									$this->CI->load->model('scenario_model');
 
-								//on relance tous les scenarios*
-								$this->CI->scenario_model->executeAll();
+									//on relance tous les scenarios*
+									$this->CI->scenario_model->executeAll();
+								}
+
 							}
-
-
 
 
 						}
@@ -128,7 +128,7 @@ class Arduihome_demon
 					if($lacmd[0] == "device")
 						$message->peripherique = (int)$lacmd[1];
 					if($lacmd[0] == "current" || $lacmd[0] == "value")
-						$message->valeur = (int)$lacmd[1];
+						$message->valeur = (float)$lacmd[1];										
 				}
 			}
 
