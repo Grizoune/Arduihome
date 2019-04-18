@@ -5,6 +5,8 @@ class Defaut_model extends CI_Model{
 
 
 	public function add($message){
+		$this->load->library('Arduihome_log');
+
 		$peripherique = $this->peripherique_model->find($message->peripherique);
 
 		$this->db->insert('defaut', array(
@@ -14,5 +16,7 @@ class Defaut_model extends CI_Model{
 		"libelle"=>$message->commandes["text"],
 		"code"=>(int)$message->commandes["code"]
 		));
+
+		$this->arduihome_log->write("default-device-".$peripherique->id, "[".$message->commandes["type"]."][".$message->commandes["code"]."] - ".$message->commandes["text"]);
 	}
 }
