@@ -61,40 +61,43 @@ class Peripherique_model extends CI_Model{
 	public function updateValeurPeripherique($_id_peripherique, $valeur){
 		$this->config->load('arduihome');
 
-		$this->db
-				->set('valeur', $valeur)
-				->set('last_heartbeat', date('Y-m-d H:i:s'))
-				->where('id', $_id_peripherique)
-				->update('peripherique');
+		if(isset($valeur)){
 
-		$perif = $this->find($_id_peripherique);
-		if($perif->log_value == 1){
+				$this->db
+						->set('valeur', $valeur)
+						->set('last_heartbeat', date('Y-m-d H:i:s'))
+						->where('id', $_id_peripherique)
+						->update('peripherique');
 
-			
-		if($this->config->item('influx_url')){
-				$timestamp = explode(" ", microtime());
-				$timestamp = $timestamp[0]+($timestamp[1]*10000);
-				$timestamp = (string)$timestamp;
+				$perif = $this->find($_id_peripherique);
+				if($perif->log_value == 1){
 
-				$data = "temperatures,device=".$perif->target.",zone=".$perif->zone." ".str_replace(" ","_", $perif->nom)."=".$valeur." ".$timestamp."00000";
-				//echo $data."\n";
+					
+					if($this->config->item('influx_url')){
+						$timestamp = explode(" ", microtime());
+						$timestamp = $timestamp[0]+($timestamp[1]*10000);
+						$timestamp = (string)$timestamp;
 
-				$tuCurl = curl_init();
-				curl_setopt($tuCurl, CURLOPT_URL, $this->config->item('influx_url')); 
-				curl_setopt($tuCurl, CURLOPT_POST, 1);
-				curl_setopt($tuCurl, CURLOPT_POSTFIELDS, $data); 
+						$data = "temperatures,device=".$perif->target.",zone=".$perif->zone." ".str_replace(" ","_", $perif->nom)."=".$valeur." ".$timestamp."00000";
+						//echo $data."\n";
 
-				$tuData = curl_exec($tuCurl); 
-				if(!curl_errno($tuCurl)){
-				  $info = curl_getinfo($tuCurl);
-				  echo 'Took ' . $info['total_time'] . ' seconds to send a request to ' . $info['url'];
-				} else {
-				  echo 'Curl error: ' . curl_error($tuCurl);
+						$tuCurl = curl_init();
+						curl_setopt($tuCurl, CURLOPT_URL, $this->config->item('influx_url')); 
+						curl_setopt($tuCurl, CURLOPT_POST, 1);
+						curl_setopt($tuCurl, CURLOPT_POSTFIELDS, $data); 
+
+						$tuData = curl_exec($tuCurl); 
+						if(!curl_errno($tuCurl)){
+						  $info = curl_getinfo($tuCurl);
+						  echo 'Took ' . $info['total_time'] . ' seconds to send a request to ' . $info['url'];
+						} else {
+						  echo 'Curl error: ' . curl_error($tuCurl);
+						}
+
+						curl_close($tuCurl);
+						echo $tuData."\n"; 
+					}
 				}
-
-				curl_close($tuCurl);
-				echo $tuData."\n"; 
-			}
 		}
 	}
 
