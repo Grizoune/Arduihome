@@ -31,7 +31,7 @@
 					    <?php if(!empty($periph->widget))include('widget/'.$periph->widget.".php"); ?>
 
 					  	<?php foreach($periph->commandes as $commande){ ?>
-					    <a href="#" onclick="sendCommande(<?php echo $commande->id; ?>); return false;" class="card-link btn bouton bouton-<?php echo $periph->id."-".$commande->nouvelle_valeur; ?>" ><?php echo $commande->nom; ?></a>
+					    <a href="#" onclick="sendCommande(<?php echo $commande->id; ?>); return false;" class="card-link btn bouton bouton-<?php echo $periph->id."-".str_replace(".","-",$commande->nouvelle_valeur); ?>" ><?php echo $commande->nom; ?></a>
 					    <?php } ?>
 					  </div>
 					</div>

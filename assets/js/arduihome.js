@@ -35,7 +35,7 @@ function actualise_demon_status(){
 			$('.bouton').addClass("btn-primary");
 
 		for(i=0; i < data.peripheriques_status.length; i++){
-				$('.bouton-'+data.peripheriques_status[i].id+"-"+data.peripheriques_status[i].valeur).removeClass("btn-primary");
+				$('.bouton-'+data.peripheriques_status[i].id+"-"+(data.peripheriques_status[i].valeur).replace(".","-")).removeClass("btn-primary");
 
 				if(data.peripheriques_status[i].locked == "1")
 					$('.verou-'+data.peripheriques_status[i].id).show();
