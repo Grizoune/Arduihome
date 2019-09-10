@@ -35,6 +35,9 @@ function actualise_demon_status(){
 			$('.bouton').addClass("btn-primary");
 
 		for(i=0; i < data.peripheriques_status.length; i++){
+				if(typeof data.peripheriques_status[i].valeur == 'undefined')
+					console.log(data.peripheriques_status[i]);
+
 				$('.bouton-'+data.peripheriques_status[i].id+"-"+(data.peripheriques_status[i].valeur).replace(".","-")).removeClass("btn-primary");
 
 				if(data.peripheriques_status[i].locked == "1")
