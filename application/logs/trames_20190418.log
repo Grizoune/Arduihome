@@ -1,0 +1,3450 @@
+2019-04-18 23:36:15 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:36:18 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:36:40 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:36:40 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:36:41 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:36:41 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:36:42 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:36:46 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:36:46 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:36:51 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:36:51 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:36:51 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:36:52 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:36:56 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:36:57 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:37:01 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:37:02 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:37:02 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:37:03 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:37:07 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:37:08 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:37:12 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:37:12 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:37:13 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:37:13 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:37:17 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:37:19 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:37:22 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:37:24 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:37:24 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:37:25 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:37:27 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:37:30 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:37:33 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:37:36 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:37:38 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:37:41 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:37:42 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:37:43 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:37:46 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:37:46 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:37:47 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:37:48 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:37:52 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:37:53 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:37:57 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:37:57 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:37:58 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:37:58 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:38:03 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:38:04 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:38:08 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:38:08 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:38:09 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:38:09 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:38:12 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:38:14 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:38:14 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:38:19 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:38:19 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:38:19 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:38:20 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:38:24 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:38:25 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:38:29 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:38:30 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:38:31 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:38:31 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:38:35 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:38:36 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:38:40 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:38:41 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:38:42 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:38:42 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:38:43 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:38:45 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:38:47 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:38:50 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:38:53 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:38:53 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:38:53 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:38:58 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:39:00 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:39:03 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:39:05 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:39:06 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:39:10 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:39:11 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:39:12 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:39:15 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:39:15 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:39:16 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:39:16 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:39:21 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:39:21 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:39:26 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:39:26 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:39:26 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:39:27 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:39:31 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:39:32 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:39:37 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:39:37 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:39:37 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:39:38 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:39:42 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:39:42 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:39:43 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:39:47 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:39:48 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:39:49 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 14.0
+code=
+}
+
+2019-04-18 23:39:52 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:39:54 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:39:57 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:39:59 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:39:59 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:40:00 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 14.0
+code=
+}
+
+2019-04-18 23:40:03 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:40:05 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:40:08 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:40:10 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:40:10 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:40:12 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:40:13 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:40:16 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:40:18 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:40:21 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:40:21 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:40:22 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:40:23 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:40:27 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:40:28 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:40:32 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:40:32 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:40:33 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 14.0
+code=
+}
+
+2019-04-18 23:40:34 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:40:38 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:40:39 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:40:42 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:40:43 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:40:44 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:40:44 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 14.0
+code=
+}
+
+2019-04-18 23:40:49 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:40:49 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:40:54 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:40:54 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:40:54 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:40:55 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:40:59 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:41:00 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:41:05 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:41:05 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:41:05 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:41:06 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:41:11 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:41:12 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:41:15 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:41:16 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:41:16 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:41:17 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:41:22 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp5
+target=*
+}
+sensor.basic
+{
+device=19
+device_name=temperature garage
+current=19.3
+}
+
+2019-04-18 23:41:22 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:41:25 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:41:27 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:41:27 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:41:28 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:41:30 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:41:33 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:41:36 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:41:38 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:41:38 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:41:39 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:41:41 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:41:42 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:41:44 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:41:46 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:41:49 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:41:49 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:41:50 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:41:51 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:41:55 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:41:56 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:42:00 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:42:01 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:42:01 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:42:06 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:42:07 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:42:11 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:42:11 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:42:12 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:42:12 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:42:13 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:42:17 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:42:17 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:42:22 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:42:22 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:42:23 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:42:23 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:42:27 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:42:28 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:42:33 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:42:33 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:42:33 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:42:38 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:42:39 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:42:43 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:42:43 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:42:44 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:42:44 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:42:45 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:42:48 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:42:50 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:42:53 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:42:55 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:42:56 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:42:56 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:42:58 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:43:02 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:43:04 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:43:07 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:43:07 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:43:08 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:43:09 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:43:12 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:43:13 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:43:14 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:43:17 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:43:18 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:43:18 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:43:19 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:43:24 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:43:24 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:43:29 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:43:29 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:43:29 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:43:30 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:43:35 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:43:35 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:43:40 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:43:40 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:43:40 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:43:41 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:43:43 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:43:46 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:43:50 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:43:51 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:43:51 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:43:52 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:43:55 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:43:57 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:44:00 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:44:02 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:44:02 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:44:03 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:44:06 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:44:08 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:44:11 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:44:13 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:44:13 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:44:13 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:44:14 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:44:16 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:44:19 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:44:21 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:44:24 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:44:24 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:44:25 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:44:26 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:44:30 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:44:31 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:44:35 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:44:35 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:44:36 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:44:37 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:44:41 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:44:42 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:44:43 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:44:46 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:44:46 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:44:47 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:44:47 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:44:52 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:44:52 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:44:57 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:44:57 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:44:57 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:44:58 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:45:02 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:45:03 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:45:08 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:45:08 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:45:08 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:45:09 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:45:13 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:45:13 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:45:14 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:45:18 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:45:19 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:45:19 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:45:20 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.8
+code=
+}
+
+2019-04-18 23:45:23 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:45:25 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:45:28 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:45:30 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:45:30 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:45:31 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:45:36 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:45:39 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:45:41 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:45:41 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:45:42 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:45:43 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:45:44 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:45:47 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:45:49 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:45:52 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:45:52 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:45:53 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:45:54 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:45:58 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:45:59 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:46:03 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:46:03 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:46:04 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:46:05 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:46:09 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:46:10 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:46:13 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-04-18 23:46:14 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:46:14 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:46:15 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:46:15 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:46:20 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:46:20 : log.basic
+{
+device=18
+type=err
+text=aucun p√©riph√©rique trouv√©
+code=
+}
+
+2019-04-18 23:46:25 : log.basic
+{
+device=18
+type=inf
+text=ROM = (ˇ
+äK
+code=
+}
+
+2019-04-18 23:46:25 : log.basic
+{
+device=18
+type=inf
+text=Chip = DS18B20
+code=
+}
+
+2019-04-18 23:46:26 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:46:26 : log.basic
+{
+device=18
+type=inf
+text=Temperature = 13.5
+code=
+}
+
+2019-04-18 23:46:30 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:46:36 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+
+2019-04-18 23:46:41 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=22
+}
+

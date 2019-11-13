@@ -1,0 +1,13 @@
+2019-11-13 18:07:46 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=26
+}
+

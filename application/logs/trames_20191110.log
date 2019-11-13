@@ -1,0 +1,247 @@
+2019-11-10 15:43:47 : xpl-stat
+{
+hop=1
+source=xpl-esp01.cellier
+target=*
+}
+sensor.basic
+{
+device=18
+device_name=temperature ext
+current=9.5
+}
+
+2019-11-10 15:43:48 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=25
+}
+
+2019-11-10 15:43:58 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=25
+}
+
+2019-11-10 15:44:03 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=25
+}
+
+2019-11-10 15:44:03 : xpl-stat
+{
+hop=1
+source=xpl-esp01.cellier
+target=*
+}
+sensor.basic
+{
+device=18
+device_name=temperature ext
+current=9.5
+}
+
+2019-11-10 15:44:06 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-11-10 15:44:08 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=25
+}
+
+2019-11-10 15:44:13 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=25
+}
+
+2019-11-10 15:44:19 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=25
+}
+
+2019-11-10 15:44:19 : xpl-stat
+{
+hop=1
+source=xpl-esp01.cellier
+target=*
+}
+sensor.basic
+{
+device=18
+device_name=temperature ext
+current=9.5
+}
+
+2019-11-10 15:44:24 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=25
+}
+
+2019-11-10 15:44:29 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=25
+}
+
+2019-11-10 15:44:34 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=25
+}
+
+2019-11-10 15:44:35 : xpl-stat
+{
+hop=1
+source=xpl-esp01.cellier
+target=*
+}
+sensor.basic
+{
+device=18
+device_name=temperature ext
+current=9.5
+}
+
+2019-11-10 15:44:36 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp1
+target=*
+}
+sensor.basic
+{
+device=6
+device_name='Activation alarme'
+current=0
+}
+
+2019-11-10 15:44:39 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=25
+}
+
+2019-11-10 15:44:45 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=25
+}
+
+2019-11-10 15:44:50 : xpl-stat
+{
+hop=1
+source=xpl-ardui.esp3
+target=*
+}
+sensor.basic
+{
+device=17
+device_name=temperature salon
+current=25
+}
+
+2019-11-10 15:44:51 : xpl-stat
+{
+hop=1
+source=xpl-esp01.cellier
+target=*
+}
+sensor.basic
+{
+device=18
+device_name=temperature ext
+current=9.5
+}
+

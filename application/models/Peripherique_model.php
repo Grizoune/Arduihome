@@ -28,6 +28,21 @@ class Peripherique_model extends CI_Model{
 		return $obj;
 	}
 
+	public function findByTopic($topic){
+		$obj = $this->db
+					->select('z.*, p.*')
+					->where('p.topic', $topic)
+					->join('zone z', 'z.id = p.id_zone')
+					->get('peripherique p')
+					->row();
+		if(isset($obj)){
+			$obj->commandes = $this->db->where('id_peripherique', $obj->id)->get('commande')->result();
+			$obj->warns = $this->getDefauts($obj->id);
+			$obj->errors = $this->getErrors($obj->id);
+		}
+		return $obj;
+	}
+
 	public function getValue($_id){
 
 		$perif = $this->find($_id);

@@ -21,9 +21,16 @@ class Serveur extends CI_Controller{
 
 
 
-	public function start()
+	public function start_xpl()
 	{
-		$this->load->library('Arduihome_demon');
-		$this->arduihome_demon->build_demon();
+		$this->load->library('Demon_xpl');
+		$this->demon_xpl->build_demon();
+	}
+
+	public function start_mqtt()
+	{
+		$this->load->library('Demon_mqtt');
+		$this->demon_mqtt->build_demon();
+
 	}
 }

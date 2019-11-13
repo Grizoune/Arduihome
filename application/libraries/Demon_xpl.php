@@ -1,6 +1,6 @@
 <?php
 
-class Arduihome_demon
+class Demon_xpl
 {
 
 		private $CI;
@@ -11,6 +11,8 @@ class Arduihome_demon
 		}
 
 		public function build_demon(){
+
+
 			$this->CI =& get_instance();
 
 			$this->CI->load->library('Arduihome_log');
@@ -30,7 +32,7 @@ class Arduihome_demon
 			    die("Couldn't create socket: [$errorcode] $errormsg \n");
 			}
 			 
-			echo "Serveur started \n";
+			echo "Serveur XPL started \n";
 			 
 			// Bind the source address
 			if( !socket_bind($sock, "0.0.0.0" , 3865) )
@@ -95,6 +97,7 @@ class Arduihome_demon
 			}
 			 
 			socket_close($sock);
+			echo "close server";
 			$this->log->write("infos", "process serveur terminé");
 		}
 
@@ -132,9 +135,8 @@ class Arduihome_demon
 				}
 			}
 
-		return $message;
+			return $message;
 		}
-
 
 		public function getStatut(){
 
