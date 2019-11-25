@@ -42,7 +42,7 @@ class Ajax extends CI_Controller {
 
 		header("Access-Control-Allow-Origin: *");              // Tous les domaines
 
-		$this->load->library('Arduihome_demon');
+		$this->load->library('Demon_xpl');
 
 		$data_peripheriques = $this->db
 			->select('id, valeur, locked')
@@ -67,7 +67,7 @@ class Ajax extends CI_Controller {
 	}
 
 	public function startServeur(){
-		$this->load->library('Arduihome_demon');
+		$this->load->library('Demon_xpl');
 		$this->load->library('Arduihome_log');
 		$this->arduihome_log->write("infos", "redemarrage manuel du serveur");
 		if($this->arduihome_demon->getStatut() ==0)
