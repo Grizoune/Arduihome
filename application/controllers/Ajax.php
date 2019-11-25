@@ -55,7 +55,7 @@ class Ajax extends CI_Controller {
 			->result_array();
 
 		$data = array(
-			'demon_status' => (int)$this->arduihome_demon->getStatut(),
+			'demon_status' => (int)$this->demon_xpl->getStatut(),
 			'peripheriques_status' => $data_peripheriques,
 			'modes_status' => $data_modes,
 			'timeserver' => date("H")."h".date('i')
@@ -70,8 +70,8 @@ class Ajax extends CI_Controller {
 		$this->load->library('Demon_xpl');
 		$this->load->library('Arduihome_log');
 		$this->arduihome_log->write("infos", "redemarrage manuel du serveur");
-		if($this->arduihome_demon->getStatut() ==0)
-				$this->arduihome_demon->startProcess();
+		if($this->demon_xpl->getStatut() ==0)
+				$this->demon_xpl->startProcess();
 	}
 
 	public function favoris($id_perif){
