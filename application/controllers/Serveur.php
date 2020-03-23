@@ -19,8 +19,6 @@ class Serveur extends CI_Controller{
 
 	}
 
-
-
 	public function start_xpl()
 	{
 		$this->load->library('Demon_xpl');

@@ -22,4 +22,9 @@ class Front extends CI_Controller {
 		$this->session->set_userdata('is_ident', false);
 		redirect('dashboard/index');
 	}
+
+	public function tablette(){
+		$this->config->load('arduihome');
+		redirect($this->config->item('arduihome_screensaver'));
+	}
 }
