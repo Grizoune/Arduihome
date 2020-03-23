@@ -41,8 +41,8 @@ class Dashboard extends CI_Controller {
 		$this->load->view('identification');
 	}
 
-	public function test(){
-		$this->load->view('header');
-		$this->load->view('footer');
+	public function tablette(){
+		$this->config->load('arduihome');
+		redirect($this->config->item('arduihome_screensaver'));
 	}
 }
