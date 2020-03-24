@@ -31,8 +31,11 @@ class Front extends CI_Controller {
 	public function public_info(){
 		$myObj = array();
 		$myObj[0]['text'] = 'heure leve : '.heure_leve();
+		$myObj[0]['type'] = "string";
 		$myObj[1]['text'] = 'heure couche : '.heure_couche();
+		$myObj[1]['type'] = "string";
 		$myObj[2]['text'] = 'sun_time : '.sun_time();	
+		$myObj[2]['type'] = "string";
 		echo json_encode($myObj);
 	}
 }
