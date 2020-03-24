@@ -1,5 +1,5 @@
 var heureJson = {
-  "message0": "Heure",
+  "message0": "Heure courante",
   "colour": 230,
   'output': null
 };
@@ -14,6 +14,6 @@ Blockly.Blocks['heure_domo'] = {
 };
 
 Blockly.PHP['heure_domo'] = function(block) {
-  return ['date(\'G\')', Blockly.PHP.ORDER_MEMBER];
+  return ['h_courante()', Blockly.PHP.ORDER_MEMBER];
 };
 

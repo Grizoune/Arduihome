@@ -1,6 +1,5 @@
 <?php
 
-
 class Scenario_model extends CI_Model{
 
 	private $peripheriques_valeurs;

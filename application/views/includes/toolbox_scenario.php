@@ -298,6 +298,8 @@
       <block type="commande_domo"></block>
       <block type="valeur_domo"></block>  
       <block type="heure_domo"></block>    
+      <block type="heure_leve_domo"></block>  
+      <block type="heure_couche_domo"></block>
       <block type="sleep"></block> 
       <block type="valeur_mode"></block> 
 

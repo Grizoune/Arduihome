@@ -26,6 +26,8 @@
     include("includes/blocks/commande.inc");
     include("includes/blocks/valeur.inc");
     include("includes/blocks/heure.inc");
+    include("includes/blocks/heure_couche.inc");
+    include("includes/blocks/heure_leve.inc");
     include("includes/blocks/sleep.inc");
     include("includes/blocks/mode_valeur.inc");
   ?>

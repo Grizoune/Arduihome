@@ -27,4 +27,13 @@ class Front extends CI_Controller {
 		$this->config->load('arduihome');
 		redirect($this->config->item('arduihome_screensaver'));
 	}
+
+	public function public_info(){
+		$myObj = [];
+		$myObj['heure_leve'] = heure_leve();
+		$myObj['heure_couche'] = heure_couche();
+		$myObj['sun_time'] = sun_time();
+		
+		echo json_encode($myObj);
+	}
 }
